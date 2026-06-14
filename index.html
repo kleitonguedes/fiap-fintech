@@ -42,17 +42,17 @@
                                 <hr class="border-[#242323]" />
                             </li>
                             <li>
-                                <a href="/menu-1" title="Ver cadastro">
+                                <a href="/meu-perfil" title="Ver cadastro">
                                     <span class="block px-4 py-2">Ver cadastro</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/menu-2" title="Configurações">
+                                <a href="/configuracoes" title="Configurações">
                                     <span class="block px-4 py-2">Configurações</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/menu-2" title="Suporte">
+                                <a href="/suporte" title="Suporte">
                                     <span class="block px-4 py-2">Suporte</span>
                                 </a>
                             </li>
@@ -60,7 +60,7 @@
                                 <hr class="border-[#242323]" />
                             </li>
                             <li>
-                                <a href="/menu-3" title="Encerrar sessão">
+                                <a href="/encerrar-sessao" title="Encerrar sessão">
                                     <span class="block px-4 py-2">Encerrar sessão</span>
                                 </a>
                             </li>
@@ -109,7 +109,7 @@
             <div id="main_header__main_filter">   
                 <ol class="flex gap-4 p-2">
                     <li class="relative">
-                        <a class="h-full flex items-center gap-3 px-3.5 py-3 border border-[#242323] bg-[#161616] rounded-md" href="#toggle-profile-menu" title="Filtrar por período">
+                        <a class="h-full flex items-center gap-3 px-3.5 py-3 border border-[#242323] bg-[#161616] rounded-md" href="#toggle-period-filter" title="Filtrar por período">
                             <img width="16"  src="./src/images/calendar-icon.svg" alt="Icone de calendário" />
                             <span>Últimos 12 meses</span>
                             <img src="./src/images/arrow-down-menu.svg" alt="Icone de seta para expandir menu" />
@@ -123,17 +123,17 @@
                                 <hr class="border-[#242323]" />
                             </li>
                             <li>
-                                <a href="/menu-1" title="Ver cadastro">
+                                <a href="#select-period-filter-last-6-months" title="Últimos 6 meses">
                                     <span class="block px-4 py-2">Últimos 6 meses</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/menu-2" title="Configurações">
+                                <a href="#select-period-filter-last-3-months" title=">Últimos 3 meses">
                                     <span class="block px-4 py-2">Últimos 3 meses</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/menu-2" title="Suporte">
+                                <a href="/menu-2" title="#select-period-filter-this-month">
                                     <span class="block px-4 py-2">Neste mês</span>
                                 </a>
                             </li>
@@ -154,9 +154,228 @@
         <section>Conteúdo</section>
     </main>
 
-    <footer id="main_footer" class="w-full bg-zinc-800">
-        <section>
-            Rodapé
+    <footer id="main_footer" class="w-full">
+        <section class="flex justify-between py-6">
+            <div>
+                <ol>
+                    <li>
+                        <a href="#toggle-main-footer-menu-transparency" title="Transparência">
+                            <span class="block px-4 py-5 text-[#ED145B]">Transparência</span>
+                        </a>
+
+                        <ol id="main-footer-menu-transparency">
+                            <li>
+                                <a href="/politica-de-privacidade" title="Política de privacidade">
+                                    <span class="block px-4 py-1">
+                                        Política de privacidade
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/politica-de-seguranca" title="Política de segurança">
+                                    <span class="block px-4 py-1">
+                                        Política de segurança
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/termos-de-uso" title="Termos de Uso">
+                                    <span class="block px-4 py-1">
+                                        Termos de Uso
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/etica-compliance-e-esg" title="Ética, Compliance e ESG">
+                                    <span class="block px-4 py-1">
+                                        Ética, Compliance e ESG
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contratos" title="Contratos">
+                                    <span class="block px-4 py-1">
+                                        Contratos
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sobre-investimentos" title="Sobre investimentos">
+                                    <span class="block px-4 py-1">
+                                        Sobre investimentos
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/relatorios-financeiros" title="Relatórios financeiros">
+                                    <span class="block px-4 py-1">
+                                        Relatórios financeiros
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dados-abertos" title="Dados abertos">
+                                    <span class="block px-4 py-1">
+                                        Dados abertos
+                                    </span>
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+
+            <div>
+                <ol>
+                    <li>
+                        <a href="#toggle-main-footer-menu-careers" title="Carreiras">
+                            <span class="block px-4 py-5 text-[#ED145B]">Carreiras</span>
+                        </a>
+
+                        <ol id="main-footer-menu-careers">
+                            <li>
+                                <a href="/trabalhe-na-fintech" title="Trabalhe na Fintech">
+                                    <span class="block px-4 py-1">
+                                        Trabalhe na Fintech
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/techuniversity" title="TechUniversity">
+                                    <span class="block px-4 py-1">
+                                        TechUniversity
+                                    </span>
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+
+                <ol>
+                    <li>
+                        <a href="#toggle-main-footer-menu-explore" title="Explorar">
+                            <span class="block px-4 py-5 text-[#ED145B]">Explorar</span>
+                        </a>
+
+                        <ol id="main-footer-menu-explore">
+                            <li>
+                                <a href="/blog" title="Blog">
+                                    <span class="block px-4 py-1">
+                                        Blog
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/comunidade-da-fintech" title="Comunidade da Fintech">
+                                    <span class="block px-4 py-1">
+                                        Comunidade da Fintech
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/fininvest" title="FinInvest">
+                                    <span class="block px-4 py-1">
+                                        FinInvest
+                                    </span>
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+
+            <div>
+                <ol>
+                    <li>
+                        <a href="#toggle-main-footer-menu-press" title="Imprensa">
+                            <span class="block px-4 py-5 text-[#ED145B]">Imprensa</span>
+                        </a>
+
+                        <ol id="main-footer-menu-press">
+                            <li>
+                                <a href="/sala-de-imprensa" title="Sala de Imprensa">
+                                    <span class="block px-4 py-1">
+                                        Sala de Imprensa
+                                    </span>
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+
+                <ol>
+                    <li>
+                        <a href="#toggle-main-footer-menu-help" title="Ajuda">
+                            <span class="block px-4 py-5 text-[#ED145B]">Ajuda</span>
+                        </a>
+
+                        <ol id="main-footer-menu-help">
+                            <li>
+                                <a href="/seguranca" title="Segurança">
+                                    <span class="block px-4 py-1">
+                                        Segurança
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/perguntas-frequentes" title="Perguntas frequentes">
+                                    <span class="block px-4 py-1">
+                                        Perguntas frequentes
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/portal-de-suporte-ao-cliente" title="Portal de suporte ao cliente">
+                                    <span class="block px-4 py-1">
+                                        Portal de suporte ao cliente
+                                    </span>
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+
+            <div>
+                <ol>
+                    <li>
+                        <span class="block px-4 py-5 text-[#ED145B]">Ouvidoria</span>
+                    </li>
+                    <li>
+                        <span class="block px-4 py-1">
+                            Atendimento em dias úteis <br />
+                            das 8h às 18h <br />
+                            (horário de Brasília)
+                        </span>
+                    </li>
+                    <li>
+                        <span class="block px-4 py-1">
+                            (11) 3385-8010
+                        </span>
+                    </li>
+                </ol>
+
+                <ol>
+                    <li>
+                        <span class="block px-4 py-5 text-[#ED145B]">Endereço</span>
+                    </li>
+                    <li>
+                        <span class="block px-4 py-1">
+                            Avenida Paulista, 1106 <br />
+                            São Paulo SP <br />
+                            01311-000
+                        </span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="flex justify-center">
+            <div id="main_footer__logo" class="p-4">
+                <a class="block p-2" href="/" title="Fintech">
+                    <img width="100" src="./src/images/fintech-logo.svg" alt="Logotipo Fintech" />
+                </a>
+            </div>
         </section>
     </footer>
 </body>
