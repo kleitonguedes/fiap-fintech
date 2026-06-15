@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./src/css/global.css" />
 </head>
 
-<body class="h-screen grid grid-rows-[auto_1fr_auto] overflow-hidden bg-[#121212] text-white">
+<body class="h-screen grid grid-rows-[auto_1fr_auto] overflow-x-hidden bg-[#121212] text-white">
     <header id="main_header" class="w-full">
         <section class="h-35 flex justify-between items-center">
             <div id="main_header__logo">
@@ -150,11 +150,312 @@
         </section>
     </header>
 
-    <main id="main_content" class="w-full bg-zinc-700">
-        <section>Conteúdo</section>
+    <main id="main_content" class="w-full py-5">
+        <section class="py-4">
+            <div>
+                <p class="text-3xl font-light">Lista de gastos</p>
+            </div>
+        </section>
+
+        <section class="py-6">
+            <div class="p-5 border border-[#242323] bg-[#161616] rounded-md">
+                <p class="flex gap-3 items-center py-2">
+                    <img src="./src/images/check-list-icon.svg" alt="Icone de lista de checagem" />
+                    <span class="text-xl font-light">Lançamentos</span>
+                </p>
+
+                <div>
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#5B5858]">
+                        <li>Tipo</li>
+                        <li>Título</li>
+                        <li>Descrição</li>
+                        <li>Categoria</li>
+                        <li>Data</li>
+                        <li>Valor</li>
+                        <li>Ações</li>
+                    </ol>
+    
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                        <li>Gasto</li>
+                        <li>Compra no mercado</li>
+                        <li>Compras de alimentos e itens básicos</li>
+                        <li>Alimentação</li>
+                        <li>13/04/2026</li>
+                        <li>R$ 428,90</li>
+                        <li>
+                            <ol class="flex gap-3">
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                        <span>Editar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                        <span>Excluir</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                        <li>Gasto</li>
+                        <li>Consulta médica</li>
+                        <li>Pagamento de consulta particular</li>
+                        <li>Saúde</li>
+                        <li>10/04/2026</li>
+                        <li>R$ 250,00</li>
+                        <li>
+                            <ol class="flex gap-3">
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                        <span>Editar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                        <span>Excluir</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                        <li>Gasto</li>
+                        <li>Cinema em família</li>
+                        <li>Ingressos e lanches no final de semana</li>
+                        <li>Lazer</li>
+                        <li>03/04/2026</li>
+                        <li>R$ 186,40</li>
+                        <li>
+                            <ol class="flex gap-3">
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                        <span>Editar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                        <span>Excluir</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                        <li>Gasto</li>
+                        <li>Restaurante</li>
+                        <li>Almoço fora de casa durante o expediente</li>
+                        <li>Alimentação</li>
+                        <li>02/04/2026</li>
+                        <li>R$ 52,90</li>
+                        <li>
+                            <ol class="flex gap-3">
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                        <span>Editar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                        <span>Excluir</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                        <li>Gasto</li>
+                        <li>Padaria</li>
+                        <li>Compra de pães, frios e café da manhã</li>
+                        <li>Alimentação</li>
+                        <li>31/03/2026</li>
+                        <li>R$ 43,70</li>
+                        <li>
+                            <ol class="flex gap-3">
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                        <span>Editar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                        <span>Excluir</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                        <li>Gasto</li>
+                        <li>Exame laboratorial</li>
+                        <li>Pagamento de exame de rotina em laboratório</li>
+                        <li>Saúde</li>
+                        <li>28/03/2026</li>
+                        <li>R$ 145,00</li>
+                        <li>
+                            <ol class="flex gap-3">
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                        <span>Editar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                        <span>Excluir</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                        <li>Gasto</li>
+                        <li>Passeio no parque</li>
+                        <li>Gastos com estacionamento, lanches e bebidas</li>
+                        <li>Lazer</li>
+                        <li>25/03/2026</li>
+                        <li>R$ 58,30</li>
+                        <li>
+                            <ol class="flex gap-3">
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                        <span>Editar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                        <span>Excluir</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                        <li>Gasto</li>
+                        <li>Delivery</li>
+                        <li>Pedido de comida por aplicativo durante a semana</li>
+                        <li>Alimentação</li>
+                        <li>22/03/2026</li>
+                        <li>R$ 67,90</li>
+                        <li>
+                            <ol class="flex gap-3">
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                        <span>Editar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                        <span>Excluir</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                        <li>Gasto</li>
+                        <li>Consulta médica</li>
+                        <li>Pagamento de consulta particular agendada</li>
+                        <li>Saúde</li>
+                        <li>19/03/2026</li>
+                        <li>R$ 250,00</li>
+                        <li>
+                            <ol class="flex gap-3">
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                        <span>Editar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                        <span>Excluir</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                        <li>Gasto</li>
+                        <li>Mercado semanal</li>
+                        <li>Compra de alimentos e produtos básicos para casa</li>
+                        <li>Alimentação</li>
+                        <li>16/03/2026</li>
+                        <li>R$ 386,50</li>
+                        <li>
+                            <ol class="flex gap-3">
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                        <span>Editar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                        <span>Excluir</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+
+                <div>
+                    <ol class="flex gap-3 justify-end pt-8 pb-4">
+                        <li>
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-prev-page" title="Página anterior">
+                                <img src="./src/images/prev-pagination-icon.svg" alt="Icone de seta para retornar página" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-next-page" title="Próxima página">
+                                <span> 1 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-next-page" title="Próxima página">
+                                <span> 2 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-next-page" title="Próxima página">
+                                <span> 3 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-next-page" title="Próxima página">
+                                <span> ... </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-next-page" title="Próxima página">
+                                <img src="./src/images/next-pagination-icon.svg" alt="Icone de seta para avançar página" />
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer id="main_footer" class="w-full">
+    <footer id="main_footer" class="w-full bg-black">
         <section class="flex justify-between py-6">
             <div>
                 <ol>
