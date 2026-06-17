@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gerencie seus gastos com a Fintech." />
+    <title>Lista de Gastos | Fintech</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./src/css/global.css" />
 </head>
@@ -17,8 +19,8 @@
                 </a>
             </div>
 
-            <div id="main_header__fast_menu">   
-                <ol class="flex justify-end gap-4 p-2">
+            <nav id="main_header__fast_menu" aria-label="Menu rápido">
+                <ul class="flex justify-end gap-4 p-2">
                     <li>
                         <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
                             <img width="16" src="./src/images/help-icon-color.svg" alt="Icone de ajuda" />
@@ -34,7 +36,7 @@
                             </div>
                         </a>
 
-                        <ol class="w-50 absolute right-0 border border-[#242323] bg-[#161616] shadow-md shadow-black/20 translate-y-1 rounded-md hidden group-hover:block">
+                        <ul class="w-50 absolute right-0 border border-[#242323] bg-[#161616] shadow-md shadow-black/20 translate-y-1 rounded-md hidden group-hover:block">
                             <li>
                                 <span class="block px-4 py-2">Kleiton Guedes</span>
                             </li>
@@ -64,16 +66,16 @@
                                     <span class="block px-4 py-2">Encerrar sessão</span>
                                 </a>
                             </li>
-                        </ol>
+                        </ul>
                     </li>
-                </ol>
-            </div>
+                </ul>
+            </nav>
         </section>
 
         <section class="lg:flex justify-between items-center border border-x-0 border-[#242323] bg-[#161616]">
             <div class="w-full m-auto xl:w-7xl lg:flex lg:justify-between">
-                <div id="main_header__main_menu">
-                    <ol class="flex flex-col sm:flex-row gap-5 px-4 sm:px-2 xl:px-0 group">
+                <nav id="main_header__main_menu" aria-label="Menu principal">
+                    <ul class="flex flex-col sm:flex-row gap-5 px-4 sm:px-2 xl:px-0 group">
                         <li class="hidden sm:block group-hover:block">
                             <a class="flex gap-3 px-6 lg:px-2 py-6" href="/" title="Ir para página principal">
                                 <img src="./src/images/chart-icon.svg" alt="Icone de gráfico" />
@@ -107,11 +109,11 @@
                                 <span>Dicas</span>
                             </a>
                         </li>
-                    </ol>
-                </div>
-                
-                <div id="main_header__main_filter">   
-                    <ol class="grid grid-cols-2 gap-4 h-full px-6 lg:px-2 py-2">
+                    </ul>
+                </nav>
+
+                <div id="main_header__main_filter">
+                    <ul class="grid grid-cols-2 gap-4 h-full px-6 lg:px-2 py-2">
                         <li class="relative group">
                             <a class="h-full flex justify-between items-center px-3.5 py-3 border border-[#242323] bg-[#161616] rounded-md" href="#toggle-period-filter" title="Filtrar por período">
                                 <div class="flex gap-3">
@@ -121,7 +123,7 @@
                                 <img src="./src/images/arrow-down-menu.svg" alt="Icone de seta para expandir menu" />
                             </a>
 
-                            <ol class="w-full absolute right-0 border border-[#242323] bg-[#161616] shadow-md shadow-black/20 translate-y-1 rounded-md hidden group-hover:block">
+                            <ul class="w-full absolute right-0 border border-[#242323] bg-[#161616] shadow-md shadow-black/20 translate-y-1 rounded-md hidden group-hover:block">
                                 <li>
                                     <span class="block px-4 py-2">Últimos 12 meses</span>
                                 </li>
@@ -143,7 +145,7 @@
                                         <span class="block px-4 py-2">Neste mês</span>
                                     </a>
                                 </li>
-                            </ol>
+                            </ul>
                         </li>
                         <li>
                             <a class="h-full flex items-center gap-3 px-3.5 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#add-entry" title="Adicionar lançamento">
@@ -151,7 +153,7 @@
                                 <span>Adicionar lançamento</span>
                             </a>
                         </li>
-                    </ol>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -172,260 +174,265 @@
                 </p>
 
                 <div class="overflow-x-scroll">
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#5B5858]">
-                        <li>Tipo</li>
-                        <li>Título</li>
-                        <li>Descrição</li>
-                        <li>Categoria</li>
-                        <li>Data</li>
-                        <li>Valor</li>
-                        <li>Ações</li>
-                    </ol>
-    
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
-                        <li>Gasto</li>
-                        <li>Compra no mercado</li>
-                        <li>Compras de alimentos e itens básicos</li>
-                        <li>Alimentação</li>
-                        <li>13/04/2026</li>
-                        <li>R$ 428,90</li>
-                        <li>
-                            <ol class="flex gap-3">
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                        <span>Editar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                        <span>Excluir</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
-                        <li>Gasto</li>
-                        <li>Consulta médica</li>
-                        <li>Pagamento de consulta particular</li>
-                        <li>Saúde</li>
-                        <li>10/04/2026</li>
-                        <li>R$ 250,00</li>
-                        <li>
-                            <ol class="flex gap-3">
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                        <span>Editar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                        <span>Excluir</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
-                        <li>Gasto</li>
-                        <li>Cinema em família</li>
-                        <li>Ingressos e lanches no final de semana</li>
-                        <li>Lazer</li>
-                        <li>03/04/2026</li>
-                        <li>R$ 186,40</li>
-                        <li>
-                            <ol class="flex gap-3">
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                        <span>Editar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                        <span>Excluir</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
-                        <li>Gasto</li>
-                        <li>Restaurante</li>
-                        <li>Almoço fora de casa durante o expediente</li>
-                        <li>Alimentação</li>
-                        <li>02/04/2026</li>
-                        <li>R$ 52,90</li>
-                        <li>
-                            <ol class="flex gap-3">
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                        <span>Editar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                        <span>Excluir</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
-                        <li>Gasto</li>
-                        <li>Padaria</li>
-                        <li>Compra de pães, frios e café da manhã</li>
-                        <li>Alimentação</li>
-                        <li>31/03/2026</li>
-                        <li>R$ 43,70</li>
-                        <li>
-                            <ol class="flex gap-3">
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                        <span>Editar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                        <span>Excluir</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
-                        <li>Gasto</li>
-                        <li>Exame laboratorial</li>
-                        <li>Pagamento de exame de rotina em laboratório</li>
-                        <li>Saúde</li>
-                        <li>28/03/2026</li>
-                        <li>R$ 145,00</li>
-                        <li>
-                            <ol class="flex gap-3">
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                        <span>Editar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                        <span>Excluir</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
-                        <li>Gasto</li>
-                        <li>Passeio no parque</li>
-                        <li>Gastos com estacionamento, lanches e bebidas</li>
-                        <li>Lazer</li>
-                        <li>25/03/2026</li>
-                        <li>R$ 58,30</li>
-                        <li>
-                            <ol class="flex gap-3">
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                        <span>Editar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                        <span>Excluir</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
-                        <li>Gasto</li>
-                        <li>Delivery</li>
-                        <li>Pedido de comida por aplicativo durante a semana</li>
-                        <li>Alimentação</li>
-                        <li>22/03/2026</li>
-                        <li>R$ 67,90</li>
-                        <li>
-                            <ol class="flex gap-3">
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                        <span>Editar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                        <span>Excluir</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
-                        <li>Gasto</li>
-                        <li>Consulta médica</li>
-                        <li>Pagamento de consulta particular agendada</li>
-                        <li>Saúde</li>
-                        <li>19/03/2026</li>
-                        <li>R$ 250,00</li>
-                        <li>
-                            <ol class="flex gap-3">
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                        <span>Editar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                        <span>Excluir</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
-                        <li>Gasto</li>
-                        <li>Mercado semanal</li>
-                        <li>Compra de alimentos e produtos básicos para casa</li>
-                        <li>Alimentação</li>
-                        <li>16/03/2026</li>
-                        <li>R$ 386,50</li>
-                        <li>
-                            <ol class="flex gap-3">
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                        <span>Editar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
-                                        <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                        <span>Excluir</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
+                    <table class="w-full min-w-6xl border-collapse">
+                        <thead>
+                            <tr class="border-b border-[#5B5858]">
+                                <th scope="col" class="py-2 text-left font-normal w-[10%]">Tipo</th>
+                                <th scope="col" class="py-2 text-left font-normal w-[14%]">Título</th>
+                                <th scope="col" class="py-2 text-left font-normal w-[28%]">Descrição</th>
+                                <th scope="col" class="py-2 text-left font-normal w-[10%]">Categoria</th>
+                                <th scope="col" class="py-2 text-left font-normal w-[10%]">Data</th>
+                                <th scope="col" class="py-2 text-left font-normal w-[10%]">Valor</th>
+                                <th scope="col" class="py-2 text-left font-normal w-[18%]">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-[#262525]">
+                                <td class="py-2">Gasto</td>
+                                <td class="py-2">Compra no mercado</td>
+                                <td class="py-2">Compras de alimentos e itens básicos</td>
+                                <td class="py-2">Alimentação</td>
+                                <td class="py-2">13/04/2026</td>
+                                <td class="py-2">R$ 428,90</td>
+                                <td class="py-2">
+                                    <ul class="flex gap-3">
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                                <span>Editar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                                <span>Excluir</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#262525]">
+                                <td class="py-2">Gasto</td>
+                                <td class="py-2">Consulta médica</td>
+                                <td class="py-2">Pagamento de consulta particular</td>
+                                <td class="py-2">Saúde</td>
+                                <td class="py-2">10/04/2026</td>
+                                <td class="py-2">R$ 250,00</td>
+                                <td class="py-2">
+                                    <ul class="flex gap-3">
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                                <span>Editar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                                <span>Excluir</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#262525]">
+                                <td class="py-2">Gasto</td>
+                                <td class="py-2">Cinema em família</td>
+                                <td class="py-2">Ingressos e lanches no final de semana</td>
+                                <td class="py-2">Lazer</td>
+                                <td class="py-2">03/04/2026</td>
+                                <td class="py-2">R$ 186,40</td>
+                                <td class="py-2">
+                                    <ul class="flex gap-3">
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                                <span>Editar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                                <span>Excluir</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#262525]">
+                                <td class="py-2">Gasto</td>
+                                <td class="py-2">Restaurante</td>
+                                <td class="py-2">Almoço fora de casa durante o expediente</td>
+                                <td class="py-2">Alimentação</td>
+                                <td class="py-2">02/04/2026</td>
+                                <td class="py-2">R$ 52,90</td>
+                                <td class="py-2">
+                                    <ul class="flex gap-3">
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                                <span>Editar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                                <span>Excluir</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#262525]">
+                                <td class="py-2">Gasto</td>
+                                <td class="py-2">Padaria</td>
+                                <td class="py-2">Compra de pães, frios e café da manhã</td>
+                                <td class="py-2">Alimentação</td>
+                                <td class="py-2">31/03/2026</td>
+                                <td class="py-2">R$ 43,70</td>
+                                <td class="py-2">
+                                    <ul class="flex gap-3">
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                                <span>Editar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                                <span>Excluir</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#262525]">
+                                <td class="py-2">Gasto</td>
+                                <td class="py-2">Exame laboratorial</td>
+                                <td class="py-2">Pagamento de exame de rotina em laboratório</td>
+                                <td class="py-2">Saúde</td>
+                                <td class="py-2">28/03/2026</td>
+                                <td class="py-2">R$ 145,00</td>
+                                <td class="py-2">
+                                    <ul class="flex gap-3">
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                                <span>Editar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                                <span>Excluir</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#262525]">
+                                <td class="py-2">Gasto</td>
+                                <td class="py-2">Passeio no parque</td>
+                                <td class="py-2">Gastos com estacionamento, lanches e bebidas</td>
+                                <td class="py-2">Lazer</td>
+                                <td class="py-2">25/03/2026</td>
+                                <td class="py-2">R$ 58,30</td>
+                                <td class="py-2">
+                                    <ul class="flex gap-3">
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                                <span>Editar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                                <span>Excluir</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#262525]">
+                                <td class="py-2">Gasto</td>
+                                <td class="py-2">Delivery</td>
+                                <td class="py-2">Pedido de comida por aplicativo durante a semana</td>
+                                <td class="py-2">Alimentação</td>
+                                <td class="py-2">22/03/2026</td>
+                                <td class="py-2">R$ 67,90</td>
+                                <td class="py-2">
+                                    <ul class="flex gap-3">
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                                <span>Editar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                                <span>Excluir</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#262525]">
+                                <td class="py-2">Gasto</td>
+                                <td class="py-2">Consulta médica</td>
+                                <td class="py-2">Pagamento de consulta particular agendada</td>
+                                <td class="py-2">Saúde</td>
+                                <td class="py-2">19/03/2026</td>
+                                <td class="py-2">R$ 250,00</td>
+                                <td class="py-2">
+                                    <ul class="flex gap-3">
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                                <span>Editar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                                <span>Excluir</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#262525]">
+                                <td class="py-2">Gasto</td>
+                                <td class="py-2">Mercado semanal</td>
+                                <td class="py-2">Compra de alimentos e produtos básicos para casa</td>
+                                <td class="py-2">Alimentação</td>
+                                <td class="py-2">16/03/2026</td>
+                                <td class="py-2">R$ 386,50</td>
+                                <td class="py-2">
+                                    <ul class="flex gap-3">
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                                                <span>Editar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                                                <span>Excluir</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <div>
-                    <ol class="flex gap-3 justify-center md:justify-end pt-8 pb-4">
+                    <ul class="flex gap-3 justify-center md:justify-end pt-8 pb-4">
                         <li>
                             <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-prev-page" title="Página anterior">
                                 <img src="./src/images/prev-pagination-icon.svg" alt="Icone de seta para retornar página" />
@@ -456,7 +463,7 @@
                                 <img src="./src/images/next-pagination-icon.svg" alt="Icone de seta para avançar página" />
                             </a>
                         </li>
-                    </ol>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -465,14 +472,14 @@
     <footer id="main_footer" class="w-full bg-black">
         <section class="w-full m-auto xl:w-7xl flex flex-col md:flex-row justify-center md:justify-between px-6 lg:px-2 py-6">
             <div>
-                <ol>
+                <ul>
                     <li class="group">
                         <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-transparency" title="Transparência">
                             <span class="block px-4 py-5 text-[#ED145B]">Transparência</span>
                             <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
                         </a>
 
-                        <ol id="main-footer-menu-transparency" class="hidden sm:block group-hover:block">
+                        <ul id="main-footer-menu-transparency" class="hidden sm:block group-hover:block">
                             <li>
                                 <a href="/politica-de-privacidade" title="Política de privacidade">
                                     <span class="block px-4 py-1 text-center md:text-left">
@@ -529,20 +536,20 @@
                                     </span>
                                 </a>
                             </li>
-                        </ol>
+                        </ul>
                     </li>
-                </ol>
+                </ul>
             </div>
 
             <div>
-                <ol>
+                <ul>
                     <li class="group">
                         <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-careers" title="Carreiras">
                             <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Carreiras</span>
                             <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
                         </a>
 
-                        <ol id="main-footer-menu-careers" class="hidden sm:block group-hover:block">
+                        <ul id="main-footer-menu-careers" class="hidden sm:block group-hover:block">
                             <li>
                                 <a href="/trabalhe-na-fintech" title="Trabalhe na Fintech">
                                     <span class="block px-4 py-1 text-center md:text-left">
@@ -557,18 +564,18 @@
                                     </span>
                                 </a>
                             </li>
-                        </ol>
+                        </ul>
                     </li>
-                </ol>
+                </ul>
 
-                <ol>
+                <ul>
                     <li class="group">
                         <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-explore" title="Explorar">
                             <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Explorar</span>
                             <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
                         </a>
 
-                        <ol id="main-footer-menu-explore" class="hidden sm:block group-hover:block">
+                        <ul id="main-footer-menu-explore" class="hidden sm:block group-hover:block">
                             <li>
                                 <a href="/blog" title="Blog">
                                     <span class="block px-4 py-1 text-center md:text-left">
@@ -590,20 +597,20 @@
                                     </span>
                                 </a>
                             </li>
-                        </ol>
+                        </ul>
                     </li>
-                </ol>
+                </ul>
             </div>
 
             <div>
-                <ol>
+                <ul>
                     <li class="group">
                         <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-press" title="Imprensa">
                             <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Imprensa</span>
                             <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
                         </a>
 
-                        <ol id="main-footer-menu-press" class="hidden sm:block group-hover:block">
+                        <ul id="main-footer-menu-press" class="hidden sm:block group-hover:block">
                             <li>
                                 <a href="/sala-de-imprensa" title="Sala de Imprensa">
                                     <span class="block px-4 py-1 text-center md:text-left">
@@ -611,18 +618,18 @@
                                     </span>
                                 </a>
                             </li>
-                        </ol>
+                        </ul>
                     </li>
-                </ol>
+                </ul>
 
-                <ol>
+                <ul>
                     <li class="group">
                         <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-help" title="Ajuda">
                             <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Ajuda</span>
                             <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
                         </a>
 
-                        <ol id="main-footer-menu-help" class="hidden sm:block group-hover:block">
+                        <ul id="main-footer-menu-help" class="hidden sm:block group-hover:block">
                             <li>
                                 <a href="/seguranca" title="Segurança">
                                     <span class="block px-4 py-1 text-center md:text-left">
@@ -644,13 +651,13 @@
                                     </span>
                                 </a>
                             </li>
-                        </ol>
+                        </ul>
                     </li>
-                </ol>
+                </ul>
             </div>
 
             <div>
-                <ol>
+                <ul>
                     <li>
                         <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Ouvidoria</span>
                     </li>
@@ -666,9 +673,9 @@
                             (11) 3385-8010
                         </span>
                     </li>
-                </ol>
+                </ul>
 
-                <ol>
+                <ul>
                     <li>
                         <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Endereço</span>
                     </li>
@@ -679,7 +686,7 @@
                             01311-000
                         </span>
                     </li>
-                </ol>
+                </ul>
             </div>
         </section>
 
