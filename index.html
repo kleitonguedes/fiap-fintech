@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="./src/css/global.css" />
 </head>
 
-<body class="h-screen grid grid-rows-[auto_1fr_auto] overflow-x-hidden bg-[#121212] text-white">
+<body class="h-screen overflow-x-hidden bg-[#121212] text-white">
     <header id="main_header" class="w-full">
-        <section class="h-35 flex justify-between items-center">
+        <section class="w-full h-35 grid grid-cols-[1fr_2fr] justify-between items-center">
             <div id="main_header__logo">
-                <a class="block p-2" href="/" title="Fintech">
+                <a class="block p-2 pl-4" href="/" title="Fintech">
                     <img src="./src/images/fintech-logo.svg" alt="Logotipo Fintech" />
                 </a>
             </div>
 
             <div id="main_header__fast_menu">   
-                <ol class="flex gap-4 p-2">
+                <ol class="flex justify-end gap-4 p-2">
                     <li>
                         <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
                             <img width="16" src="./src/images/help-icon-color.svg" alt="Icone de ajuda" />
                             <span>Ajuda</span>
                         </a>
                     </li>
-                    <li class="relative group">
+                    <li class="relative group pr-4">
                         <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md" href="#toggle-profile-menu" title="Perfil">
                             <img width="16"  src="./src/images/menu-icon-color.svg" alt="Imagem de perfil do usuário" />
                             <span>Kleiton</span>
@@ -70,102 +70,109 @@
             </div>
         </section>
 
-        <section class="flex justify-between items-center border border-x-0 border-[#242323] bg-[#161616]">
-            <div id="main_header__main_menu">
-                <ol class="flex gap-5">
-                    <li>
-                        <a class="flex gap-3 px-2 py-6" href="/" title="Ir para página principal">
-                            <img src="./src/images/chart-icon.svg" alt="Icone de gráfico" />
-                            <span>Resumo</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="flex gap-3 px-2 py-6" href="/" title="Proventos">
-                            <img src="./src/images/dollar-sign-icon.svg" alt="Icone de cifrão" />
-                            <span>Proventos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="flex gap-3 px-2 py-6 border-b-2 border-solid border-[#ED145B]" href="/" title="Gastos">
-                            <img src="./src/images/dollar-sign-off-icon.svg" alt="Icone de cifrão cortado" />
-                            <span>Gastos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="flex gap-3 px-2 py-6" href="/" title="Metas">
-                            <img src="./src/images/target-icon.svg" alt="Icone de alvo" />
-                            <span>Metas</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="flex gap-3 px-2 py-6" href="/dicas" title="Dicas">
-                            <img class="-mt-1" src="./src/images/lamp-icon.svg" alt="Icone de lampada" />
-                            <span>Dicas</span>
-                        </a>
-                    </li>
-                </ol>
-            </div>
-            
-            <div id="main_header__main_filter">   
-                <ol class="flex gap-4 p-2">
-                    <li class="relative group">
-                        <a class="h-full flex items-center gap-3 px-3.5 py-3 border border-[#242323] bg-[#161616] rounded-md" href="#toggle-period-filter" title="Filtrar por período">
-                            <img width="16"  src="./src/images/calendar-icon.svg" alt="Icone de calendário" />
-                            <span>Últimos 12 meses</span>
-                            <img src="./src/images/arrow-down-menu.svg" alt="Icone de seta para expandir menu" />
-                        </a>
+        <section class="lg:flex justify-between items-center border border-x-0 border-[#242323] bg-[#161616]">
+            <div class="w-full m-auto xl:w-7xl lg:flex lg:justify-between">
+                <div id="main_header__main_menu">
+                    <ol class="flex flex-col sm:flex-row gap-5 px-4 sm:px-2 xl:px-0 group">
+                        <li class="hidden sm:block group-hover:block">
+                            <a class="flex gap-3 px-6 lg:px-2 py-6" href="/" title="Ir para página principal">
+                                <img src="./src/images/chart-icon.svg" alt="Icone de gráfico" />
+                                <span>Resumo</span>
+                            </a>
+                        </li>
+                        <li class="hidden sm:block group-hover:block">
+                            <a class="flex gap-3 px-6 lg:px-2 py-6" href="/" title="Proventos">
+                                <img src="./src/images/dollar-sign-icon.svg" alt="Icone de cifrão" />
+                                <span>Proventos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex justify-between gap-3 px-6 lg:px-2 py-6 border-b-2 border-solid border-[#ED145B]" href="#toggle-main-menu-header" title="Gastos">
+                                <div class="flex gap-3">
+                                    <img width="18" src="./src/images/dollar-sign-off-icon.svg" alt="Icone de cifrão cortado" />
+                                    <span>Gastos</span>
+                                </div>
+                                <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
+                            </a>
+                        </li>
+                        <li class="hidden sm:block group-hover:block">
+                            <a class="flex gap-3 px-6 lg:px-2 py-6" href="/" title="Metas">
+                                <img src="./src/images/target-icon.svg" alt="Icone de alvo" />
+                                <span>Metas</span>
+                            </a>
+                        </li>
+                        <li class="hidden sm:block group-hover:block">
+                            <a class="flex gap-3 px-6 lg:px-2 py-6" href="/dicas" title="Dicas">
+                                <img class="-mt-1" src="./src/images/lamp-icon.svg" alt="Icone de lampada" />
+                                <span>Dicas</span>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div id="main_header__main_filter">   
+                    <ol class="grid grid-cols-2 gap-4 h-full px-6 lg:px-2 py-2">
+                        <li class="relative group">
+                            <a class="h-full flex justify-between items-center px-3.5 py-3 border border-[#242323] bg-[#161616] rounded-md" href="#toggle-period-filter" title="Filtrar por período">
+                                <div class="flex gap-3">
+                                    <img width="16"  src="./src/images/calendar-icon.svg" alt="Icone de calendário" />
+                                    <span>Últimos 12 meses</span>
+                                </div>
+                                <img src="./src/images/arrow-down-menu.svg" alt="Icone de seta para expandir menu" />
+                            </a>
 
-                        <ol class="w-full absolute right-0 border border-[#242323] bg-[#161616] shadow-md shadow-black/20 translate-y-1 rounded-md hidden group-hover:block">
-                            <li>
-                                <span class="block px-4 py-2">Últimos 12 meses</span>
-                            </li>
-                            <li>
-                                <hr class="border-[#242323]" />
-                            </li>
-                            <li>
-                                <a href="#select-period-filter-last-6-months" title="Últimos 6 meses">
-                                    <span class="block px-4 py-2">Últimos 6 meses</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#select-period-filter-last-3-months" title=">Últimos 3 meses">
-                                    <span class="block px-4 py-2">Últimos 3 meses</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/menu-2" title="#select-period-filter-this-month">
-                                    <span class="block px-4 py-2">Neste mês</span>
-                                </a>
-                            </li>
-                        </ol>
-                    </li>
-                    <li>
-                        <a class="h-full flex items-center gap-3 px-3.5 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#add-entry" title="Adicionar lançamento">
-                            <img width="16" src="./src/images/add-icon.svg" alt="Icone de adição" />
-                            <span>Adicionar lançamento</span>
-                        </a>
-                    </li>
-                </ol>
+                            <ol class="w-full absolute right-0 border border-[#242323] bg-[#161616] shadow-md shadow-black/20 translate-y-1 rounded-md hidden group-hover:block">
+                                <li>
+                                    <span class="block px-4 py-2">Últimos 12 meses</span>
+                                </li>
+                                <li>
+                                    <hr class="border-[#242323]" />
+                                </li>
+                                <li>
+                                    <a href="#select-period-filter-last-6-months" title="Últimos 6 meses">
+                                        <span class="block px-4 py-2">Últimos 6 meses</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#select-period-filter-last-3-months" title=">Últimos 3 meses">
+                                        <span class="block px-4 py-2">Últimos 3 meses</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/menu-2" title="#select-period-filter-this-month">
+                                        <span class="block px-4 py-2">Neste mês</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a class="h-full flex items-center gap-3 px-3.5 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#add-entry" title="Adicionar lançamento">
+                                <img width="16" src="./src/images/add-icon.svg" alt="Icone de adição" />
+                                <span>Adicionar lançamento</span>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
             </div>
         </section>
     </header>
 
     <main id="main_content" class="w-full py-5">
-        <section class="py-4">
-            <div>
+        <section class="w-full m-auto xl:w-7xl lg:flex lg:justify-between py-4">
+            <div class="px-6 xl:px-2">
                 <p class="text-3xl font-light">Lista de gastos</p>
             </div>
         </section>
 
-        <section class="py-6">
-            <div class="p-5 border border-[#242323] bg-[#161616] rounded-md">
+        <section class="w-full m-auto xl:w-7xl lg:flex lg:justify-between px-6 xl:px-2 py-6">
+            <div class="w-full p-5 border border-[#242323] bg-[#161616] rounded-md">
                 <p class="flex gap-3 items-center py-2">
                     <img src="./src/images/check-list-icon.svg" alt="Icone de lista de checagem" />
                     <span class="text-xl font-light">Lançamentos</span>
                 </p>
 
-                <div>
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#5B5858]">
+                <div class="overflow-x-scroll">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#5B5858]">
                         <li>Tipo</li>
                         <li>Título</li>
                         <li>Descrição</li>
@@ -175,7 +182,7 @@
                         <li>Ações</li>
                     </ol>
     
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
                         <li>Gasto</li>
                         <li>Compra no mercado</li>
                         <li>Compras de alimentos e itens básicos</li>
@@ -199,7 +206,7 @@
                             </ol>
                         </li>
                     </ol>
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
                         <li>Gasto</li>
                         <li>Consulta médica</li>
                         <li>Pagamento de consulta particular</li>
@@ -223,7 +230,7 @@
                             </ol>
                         </li>
                     </ol>
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
                         <li>Gasto</li>
                         <li>Cinema em família</li>
                         <li>Ingressos e lanches no final de semana</li>
@@ -247,7 +254,7 @@
                             </ol>
                         </li>
                     </ol>
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
                         <li>Gasto</li>
                         <li>Restaurante</li>
                         <li>Almoço fora de casa durante o expediente</li>
@@ -271,7 +278,7 @@
                             </ol>
                         </li>
                     </ol>
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
                         <li>Gasto</li>
                         <li>Padaria</li>
                         <li>Compra de pães, frios e café da manhã</li>
@@ -295,7 +302,7 @@
                             </ol>
                         </li>
                     </ol>
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
                         <li>Gasto</li>
                         <li>Exame laboratorial</li>
                         <li>Pagamento de exame de rotina em laboratório</li>
@@ -319,7 +326,7 @@
                             </ol>
                         </li>
                     </ol>
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
                         <li>Gasto</li>
                         <li>Passeio no parque</li>
                         <li>Gastos com estacionamento, lanches e bebidas</li>
@@ -343,7 +350,7 @@
                             </ol>
                         </li>
                     </ol>
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
                         <li>Gasto</li>
                         <li>Delivery</li>
                         <li>Pedido de comida por aplicativo durante a semana</li>
@@ -367,7 +374,7 @@
                             </ol>
                         </li>
                     </ol>
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
                         <li>Gasto</li>
                         <li>Consulta médica</li>
                         <li>Pagamento de consulta particular agendada</li>
@@ -391,7 +398,7 @@
                             </ol>
                         </li>
                     </ol>
-                    <ol class="w-full ml-8 py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
+                    <ol class="w-full min-w-6xl py-2 grid grid-cols-[10%_14%_28%_10%_10%_10%_18%] items-center border-b border-[#262525]">
                         <li>Gasto</li>
                         <li>Mercado semanal</li>
                         <li>Compra de alimentos e produtos básicos para casa</li>
@@ -418,7 +425,7 @@
                 </div>
 
                 <div>
-                    <ol class="flex gap-3 justify-end pt-8 pb-4">
+                    <ol class="flex gap-3 justify-center md:justify-end pt-8 pb-4">
                         <li>
                             <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-prev-page" title="Página anterior">
                                 <img src="./src/images/prev-pagination-icon.svg" alt="Icone de seta para retornar página" />
@@ -456,67 +463,68 @@
     </main>
 
     <footer id="main_footer" class="w-full bg-black">
-        <section class="flex justify-between py-6">
+        <section class="w-full m-auto xl:w-7xl flex flex-col md:flex-row justify-center md:justify-between px-6 lg:px-2 py-6">
             <div>
                 <ol>
-                    <li>
-                        <a href="#toggle-main-footer-menu-transparency" title="Transparência">
+                    <li class="group">
+                        <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-transparency" title="Transparência">
                             <span class="block px-4 py-5 text-[#ED145B]">Transparência</span>
+                            <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
                         </a>
 
-                        <ol id="main-footer-menu-transparency">
+                        <ol id="main-footer-menu-transparency" class="hidden sm:block group-hover:block">
                             <li>
                                 <a href="/politica-de-privacidade" title="Política de privacidade">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Política de privacidade
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/politica-de-seguranca" title="Política de segurança">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Política de segurança
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/termos-de-uso" title="Termos de Uso">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Termos de Uso
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/etica-compliance-e-esg" title="Ética, Compliance e ESG">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Ética, Compliance e ESG
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/contratos" title="Contratos">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Contratos
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/sobre-investimentos" title="Sobre investimentos">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Sobre investimentos
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/relatorios-financeiros" title="Relatórios financeiros">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Relatórios financeiros
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/dados-abertos" title="Dados abertos">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Dados abertos
                                     </span>
                                 </a>
@@ -528,22 +536,23 @@
 
             <div>
                 <ol>
-                    <li>
-                        <a href="#toggle-main-footer-menu-careers" title="Carreiras">
-                            <span class="block px-4 py-5 text-[#ED145B]">Carreiras</span>
+                    <li class="group">
+                        <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-careers" title="Carreiras">
+                            <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Carreiras</span>
+                            <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
                         </a>
 
-                        <ol id="main-footer-menu-careers">
+                        <ol id="main-footer-menu-careers" class="hidden sm:block group-hover:block">
                             <li>
                                 <a href="/trabalhe-na-fintech" title="Trabalhe na Fintech">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Trabalhe na Fintech
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/techuniversity" title="TechUniversity">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         TechUniversity
                                     </span>
                                 </a>
@@ -553,29 +562,30 @@
                 </ol>
 
                 <ol>
-                    <li>
-                        <a href="#toggle-main-footer-menu-explore" title="Explorar">
-                            <span class="block px-4 py-5 text-[#ED145B]">Explorar</span>
+                    <li class="group">
+                        <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-explore" title="Explorar">
+                            <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Explorar</span>
+                            <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
                         </a>
 
-                        <ol id="main-footer-menu-explore">
+                        <ol id="main-footer-menu-explore" class="hidden sm:block group-hover:block">
                             <li>
                                 <a href="/blog" title="Blog">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Blog
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/comunidade-da-fintech" title="Comunidade da Fintech">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Comunidade da Fintech
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/fininvest" title="FinInvest">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         FinInvest
                                     </span>
                                 </a>
@@ -587,15 +597,16 @@
 
             <div>
                 <ol>
-                    <li>
-                        <a href="#toggle-main-footer-menu-press" title="Imprensa">
-                            <span class="block px-4 py-5 text-[#ED145B]">Imprensa</span>
+                    <li class="group">
+                        <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-press" title="Imprensa">
+                            <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Imprensa</span>
+                            <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
                         </a>
 
-                        <ol id="main-footer-menu-press">
+                        <ol id="main-footer-menu-press" class="hidden sm:block group-hover:block">
                             <li>
                                 <a href="/sala-de-imprensa" title="Sala de Imprensa">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Sala de Imprensa
                                     </span>
                                 </a>
@@ -605,29 +616,30 @@
                 </ol>
 
                 <ol>
-                    <li>
-                        <a href="#toggle-main-footer-menu-help" title="Ajuda">
-                            <span class="block px-4 py-5 text-[#ED145B]">Ajuda</span>
+                    <li class="group">
+                        <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-help" title="Ajuda">
+                            <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Ajuda</span>
+                            <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
                         </a>
 
-                        <ol id="main-footer-menu-help">
+                        <ol id="main-footer-menu-help" class="hidden sm:block group-hover:block">
                             <li>
                                 <a href="/seguranca" title="Segurança">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Segurança
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/perguntas-frequentes" title="Perguntas frequentes">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Perguntas frequentes
                                     </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/portal-de-suporte-ao-cliente" title="Portal de suporte ao cliente">
-                                    <span class="block px-4 py-1">
+                                    <span class="block px-4 py-1 text-center md:text-left">
                                         Portal de suporte ao cliente
                                     </span>
                                 </a>
@@ -640,17 +652,17 @@
             <div>
                 <ol>
                     <li>
-                        <span class="block px-4 py-5 text-[#ED145B]">Ouvidoria</span>
+                        <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Ouvidoria</span>
                     </li>
                     <li>
-                        <span class="block px-4 py-1">
+                        <span class="block px-4 py-1 text-center md:text-left">
                             Atendimento em dias úteis <br />
                             das 8h às 18h <br />
                             (horário de Brasília)
                         </span>
                     </li>
                     <li>
-                        <span class="block px-4 py-1">
+                        <span class="block px-4 py-1 text-center md:text-left">
                             (11) 3385-8010
                         </span>
                     </li>
@@ -658,10 +670,10 @@
 
                 <ol>
                     <li>
-                        <span class="block px-4 py-5 text-[#ED145B]">Endereço</span>
+                        <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Endereço</span>
                     </li>
                     <li>
-                        <span class="block px-4 py-1">
+                        <span class="block px-4 py-1 text-center md:text-left">
                             Avenida Paulista, 1106 <br />
                             São Paulo SP <br />
                             01311-000
