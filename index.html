@@ -22,53 +22,55 @@
             <nav id="main_header__fast_menu" aria-label="Menu rápido">
                 <ul class="flex justify-end gap-4 p-2">
                     <li>
-                        <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                        <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="/ajuda" title="Ajuda">
                             <img width="16" src="./src/images/help-icon-color.svg" alt="Icone de ajuda" />
-                            <span>Ajuda</span>
+                            <span class="hidden sm:block">Ajuda</span>
                         </a>
                     </li>
                     <li class="relative group pr-4">
-                        <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md" href="#toggle-profile-menu" title="Perfil">
+                        <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md group-hover:border-[#ED145B]" href="#toggle-profile-menu" title="Perfil">
                             <img width="16"  src="./src/images/menu-icon-color.svg" alt="Imagem de perfil do usuário" />
-                            <span>Kleiton</span>
+                            <span class="hidden sm:block">Kleiton</span>
                             <div class="flex items-center justify-center w-10 h-10 my-1 bg-[#ED145B] rounded-full">
                                 K
                             </div>
                         </a>
 
-                        <ul class="w-50 absolute right-0 border border-[#242323] bg-[#161616] shadow-md shadow-black/20 translate-y-1 rounded-md hidden group-hover:block">
-                            <li>
-                                <span class="block px-4 py-2">Kleiton Guedes</span>
-                            </li>
-                            <li>
-                                <hr class="border-[#242323]" />
-                            </li>
-                            <li>
-                                <a href="/meu-perfil" title="Ver cadastro">
-                                    <span class="block px-4 py-2">Ver cadastro</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/configuracoes" title="Configurações">
-                                    <span class="block px-4 py-2">Configurações</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/suporte" title="Suporte">
-                                    <span class="block px-4 py-2">Suporte</span>
-                                </a>
-                            </li>
-                            <li>
-                                <hr class="border-[#242323]" />
-                            </li>
-                            <li>
-                                <a href="/encerrar-sessao" title="Encerrar sessão">
-                                    <span class="block px-4 py-2">Encerrar sessão</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                        <div class="w-50 absolute right-4 hidden group-hover:block">
+                          <ul class="border border-[#242323] bg-[#161616] shadow-md shadow-black/20 translate-y-1 rounded-md ">
+                              <li>
+                                  <span class="block px-4 py-2">Kleiton Guedes</span>
+                              </li>
+                              <li>
+                                  <hr class="border-[#242323]" />
+                              </li>
+                              <li>
+                                  <a href="/meu-perfil" title="Ver cadastro" class="hover:text-[#ED145B]">
+                                      <span class="block px-4 py-2">Ver cadastro</span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/configuracoes" title="Configurações" class="hover:text-[#ED145B]">
+                                      <span class="block px-4 py-2">Configurações</span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/suporte" title="Suporte" class="hover:text-[#ED145B]">
+                                      <span class="block px-4 py-2">Suporte</span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <hr class="border-[#242323]" />
+                              </li>
+                              <li>
+                                  <a href="/encerrar-sessao" title="Encerrar sessão" class="hover:text-[#ED145B]">
+                                      <span class="block px-4 py-2">Encerrar sessão</span>
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+                </div>
             </nav>
         </section>
 
@@ -77,13 +79,13 @@
                 <nav id="main_header__main_menu" aria-label="Menu principal">
                     <ul class="flex flex-col sm:flex-row gap-5 px-4 sm:px-2 xl:px-0 group">
                         <li class="hidden sm:block group-hover:block">
-                            <a class="flex gap-3 px-6 lg:px-2 py-6" href="/" title="Ir para página principal">
+                            <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Ir para página principal">
                                 <img src="./src/images/chart-icon.svg" alt="Icone de gráfico" />
                                 <span>Resumo</span>
                             </a>
                         </li>
                         <li class="hidden sm:block group-hover:block">
-                            <a class="flex gap-3 px-6 lg:px-2 py-6" href="/" title="Proventos">
+                            <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Proventos">
                                 <img src="./src/images/dollar-sign-icon.svg" alt="Icone de cifrão" />
                                 <span>Proventos</span>
                             </a>
@@ -98,13 +100,13 @@
                             </a>
                         </li>
                         <li class="hidden sm:block group-hover:block">
-                            <a class="flex gap-3 px-6 lg:px-2 py-6" href="/" title="Metas">
+                            <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Metas">
                                 <img src="./src/images/target-icon.svg" alt="Icone de alvo" />
                                 <span>Metas</span>
                             </a>
                         </li>
                         <li class="hidden sm:block group-hover:block">
-                            <a class="flex gap-3 px-6 lg:px-2 py-6" href="/dicas" title="Dicas">
+                            <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/dicas" title="Dicas">
                                 <img class="-mt-1" src="./src/images/lamp-icon.svg" alt="Icone de lampada" />
                                 <span>Dicas</span>
                             </a>
@@ -115,37 +117,39 @@
                 <div id="main_header__main_filter">
                     <ul class="grid grid-cols-2 gap-4 h-full px-6 lg:px-2 py-2">
                         <li class="relative group">
-                            <a class="h-full flex justify-between items-center px-3.5 py-3 border border-[#242323] bg-[#161616] rounded-md" href="#toggle-period-filter" title="Filtrar por período">
+                            <a class="h-full flex justify-between items-center px-3.5 py-3 border border-[#242323] bg-[#161616] rounded-md group-hover:border-[#ED145B]" href="#toggle-period-filter" title="Filtrar por período">
                                 <div class="flex gap-3">
                                     <img width="16"  src="./src/images/calendar-icon.svg" alt="Icone de calendário" />
                                     <span>Últimos 12 meses</span>
                                 </div>
                                 <img src="./src/images/arrow-down-menu.svg" alt="Icone de seta para expandir menu" />
                             </a>
-
-                            <ul class="w-full absolute right-0 border border-[#242323] bg-[#161616] shadow-md shadow-black/20 translate-y-1 rounded-md hidden group-hover:block">
+                            
+                            <div class="w-full pt-1 absolute right-0 hidden group-hover:block">
+                              <ul class="w-full border border-[#242323] bg-[#161616] shadow-md shadow-black/20 rounded-md">
                                 <li>
-                                    <span class="block px-4 py-2">Últimos 12 meses</span>
-                                </li>
-                                <li>
-                                    <hr class="border-[#242323]" />
-                                </li>
-                                <li>
-                                    <a href="#select-period-filter-last-6-months" title="Últimos 6 meses">
-                                        <span class="block px-4 py-2">Últimos 6 meses</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#select-period-filter-last-3-months" title=">Últimos 3 meses">
-                                        <span class="block px-4 py-2">Últimos 3 meses</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/menu-2" title="#select-period-filter-this-month">
-                                        <span class="block px-4 py-2">Neste mês</span>
-                                    </a>
-                                </li>
-                            </ul>
+                                      <span class="block px-4 py-2">Últimos 12 meses</span>
+                                  </li>
+                                  <li>
+                                      <hr class="border-[#242323]" />
+                                  </li>
+                                  <li>
+                                      <a href="#select-period-filter-last-6-months" title="Últimos 6 meses" class="hover:text-[#ED145B]">
+                                          <span class="block px-4 py-2">Últimos 6 meses</span>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#select-period-filter-last-3-months" title=">Últimos 3 meses" class="hover:text-[#ED145B]">
+                                          <span class="block px-4 py-2">Últimos 3 meses</span>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="/menu-2" title="#select-period-filter-this-month" class="hover:text-[#ED145B]">
+                                          <span class="block px-4 py-2">Neste mês</span>
+                                      </a>
+                                  </li>
+                              </ul>  
+                              </div>
                         </li>
                         <li>
                             <a class="h-full flex items-center gap-3 px-3.5 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#add-entry" title="Adicionar lançamento">
@@ -173,7 +177,7 @@
                     <span class="text-xl font-light">Lançamentos</span>
                 </p>
 
-                <div class="overflow-x-scroll">
+                <div class="overflow-x-auto">
                     <table class="w-full min-w-6xl border-collapse">
                         <thead>
                             <tr class="border-b border-[#5B5858]">
@@ -197,13 +201,13 @@
                                 <td class="py-2">
                                     <ul class="flex gap-3">
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
                                                 <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                                                 <span>Editar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
                                                 <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                                                 <span>Excluir</span>
                                             </a>
@@ -221,13 +225,13 @@
                                 <td class="py-2">
                                     <ul class="flex gap-3">
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
                                                 <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                                                 <span>Editar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
                                                 <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                                                 <span>Excluir</span>
                                             </a>
@@ -245,13 +249,13 @@
                                 <td class="py-2">
                                     <ul class="flex gap-3">
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
                                                 <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                                                 <span>Editar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
                                                 <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                                                 <span>Excluir</span>
                                             </a>
@@ -269,13 +273,13 @@
                                 <td class="py-2">
                                     <ul class="flex gap-3">
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
                                                 <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                                                 <span>Editar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
                                                 <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                                                 <span>Excluir</span>
                                             </a>
@@ -293,13 +297,13 @@
                                 <td class="py-2">
                                     <ul class="flex gap-3">
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
                                                 <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                                                 <span>Editar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
                                                 <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                                                 <span>Excluir</span>
                                             </a>
@@ -317,13 +321,13 @@
                                 <td class="py-2">
                                     <ul class="flex gap-3">
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
                                                 <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                                                 <span>Editar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
                                                 <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                                                 <span>Excluir</span>
                                             </a>
@@ -341,13 +345,13 @@
                                 <td class="py-2">
                                     <ul class="flex gap-3">
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
                                                 <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                                                 <span>Editar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
                                                 <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                                                 <span>Excluir</span>
                                             </a>
@@ -365,13 +369,13 @@
                                 <td class="py-2">
                                     <ul class="flex gap-3">
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
                                                 <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                                                 <span>Editar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
                                                 <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                                                 <span>Excluir</span>
                                             </a>
@@ -389,13 +393,13 @@
                                 <td class="py-2">
                                     <ul class="flex gap-3">
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
                                                 <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                                                 <span>Editar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
                                                 <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                                                 <span>Excluir</span>
                                             </a>
@@ -413,13 +417,13 @@
                                 <td class="py-2">
                                     <ul class="flex gap-3">
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
                                                 <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                                                 <span>Editar</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="/ajuda" title="Ajuda">
+                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
                                                 <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                                                 <span>Excluir</span>
                                             </a>
@@ -435,31 +439,31 @@
                     <ul class="flex gap-3 justify-center md:justify-end pt-8 pb-4">
                         <li>
                             <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-prev-page" title="Página anterior">
-                                <img src="./src/images/prev-pagination-icon.svg" alt="Icone de seta para retornar página" />
+                                <img src="./src/images/prev-pagination-icon.svg" class="opacity-30" alt="Icone de seta para retornar página" />
                             </a>
                         </li>
                         <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-next-page" title="Próxima página">
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md text-[#ED145B]" href="#entry-list-page-1" title="Página 1">
                                 <span> 1 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-next-page" title="Próxima página">
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#entry-list-page-2" title="Página 2">
                                 <span> 2 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-next-page" title="Próxima página">
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#entry-list-page-3" title="Página 3">
                                 <span> 3 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-next-page" title="Próxima página">
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md text-[#666]" href="#entry-list-none" title="Mais páginas...">
                                 <span> ... </span>
                             </a>
                         </li>
                         <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-next-page" title="Próxima página">
+                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#entry-list-next-page" title="Próxima página">
                                 <img src="./src/images/next-pagination-icon.svg" alt="Icone de seta para avançar página" />
                             </a>
                         </li>
@@ -481,56 +485,56 @@
 
                         <ul id="main-footer-menu-transparency" class="hidden sm:block group-hover:block">
                             <li>
-                                <a href="/politica-de-privacidade" title="Política de privacidade">
+                                <a href="/politica-de-privacidade" title="Política de privacidade" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Política de privacidade
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/politica-de-seguranca" title="Política de segurança">
+                                <a href="/politica-de-seguranca" title="Política de segurança" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Política de segurança
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/termos-de-uso" title="Termos de Uso">
+                                <a href="/termos-de-uso" title="Termos de Uso" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Termos de Uso
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/etica-compliance-e-esg" title="Ética, Compliance e ESG">
+                                <a href="/etica-compliance-e-esg" title="Ética, Compliance e ESG" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Ética, Compliance e ESG
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/contratos" title="Contratos">
+                                <a href="/contratos" title="Contratos" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Contratos
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/sobre-investimentos" title="Sobre investimentos">
+                                <a href="/sobre-investimentos" title="Sobre investimentos" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Sobre investimentos
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/relatorios-financeiros" title="Relatórios financeiros">
+                                <a href="/relatorios-financeiros" title="Relatórios financeiros" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Relatórios financeiros
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/dados-abertos" title="Dados abertos">
+                                <a href="/dados-abertos" title="Dados abertos" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Dados abertos
                                     </span>
@@ -551,14 +555,14 @@
 
                         <ul id="main-footer-menu-careers" class="hidden sm:block group-hover:block">
                             <li>
-                                <a href="/trabalhe-na-fintech" title="Trabalhe na Fintech">
+                                <a href="/trabalhe-na-fintech" title="Trabalhe na Fintech" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Trabalhe na Fintech
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/techuniversity" title="TechUniversity">
+                                <a href="/techuniversity" title="TechUniversity" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         TechUniversity
                                     </span>
@@ -577,21 +581,21 @@
 
                         <ul id="main-footer-menu-explore" class="hidden sm:block group-hover:block">
                             <li>
-                                <a href="/blog" title="Blog">
+                                <a href="/blog" title="Blog" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Blog
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/comunidade-da-fintech" title="Comunidade da Fintech">
+                                <a href="/comunidade-da-fintech" title="Comunidade da Fintech" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Comunidade da Fintech
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/fininvest" title="FinInvest">
+                                <a href="/fininvest" title="FinInvest" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         FinInvest
                                     </span>
@@ -612,7 +616,7 @@
 
                         <ul id="main-footer-menu-press" class="hidden sm:block group-hover:block">
                             <li>
-                                <a href="/sala-de-imprensa" title="Sala de Imprensa">
+                                <a href="/sala-de-imprensa" title="Sala de Imprensa" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Sala de Imprensa
                                     </span>
@@ -631,21 +635,21 @@
 
                         <ul id="main-footer-menu-help" class="hidden sm:block group-hover:block">
                             <li>
-                                <a href="/seguranca" title="Segurança">
+                                <a href="/seguranca" title="Segurança" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Segurança
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/perguntas-frequentes" title="Perguntas frequentes">
+                                <a href="/perguntas-frequentes" title="Perguntas frequentes" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Perguntas frequentes
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/portal-de-suporte-ao-cliente" title="Portal de suporte ao cliente">
+                                <a href="/portal-de-suporte-ao-cliente" title="Portal de suporte ao cliente" class="hover:underline hover:decoration-[#ED145B]">
                                     <span class="block px-4 py-1 text-center md:text-left">
                                         Portal de suporte ao cliente
                                     </span>
