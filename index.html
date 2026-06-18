@@ -2,706 +2,695 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Gerencie seus gastos com a Fintech." />
-    <title>Lista de Gastos | Fintech</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./src/css/global.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gerencie seus gastos com a Fintech." />
+  <title>Lista de Gastos | Fintech</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./src/css/global.css" />
 </head>
 
 <body class="h-screen overflow-x-hidden bg-[#121212] text-white">
-    <header id="main_header" class="w-full">
-        <section class="w-full h-35 grid grid-cols-[1fr_2fr] justify-between items-center">
-            <div id="main_header__logo">
-                <a class="block p-2 pl-4" href="/" title="Fintech">
-                    <img src="./src/images/fintech-logo.svg" alt="Logotipo Fintech" />
-                </a>
+  <header id="main_header" class="w-full">
+    <div class="w-full h-35 grid grid-cols-[1fr_2fr] justify-between items-center">
+      <div id="main_header__logo">
+        <a class="block p-2 pl-4" href="/" title="Página inicial">
+          <img src="./src/images/fintech-logo.svg" alt="Logotipo Fintech" />
+        </a>
+      </div>
+
+      <nav id="main_header__fast_menu">
+        <ul class="flex justify-end gap-4 p-2">
+          <li>
+            <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+              href="/ajuda" title="Ajuda">
+              <img width="16" height="16" src="./src/images/help-icon-color.svg" alt="Icone de ajuda" />
+              <span class="hidden sm:block">Ajuda</span>
+            </a>
+          </li>
+          <li class="relative group pr-4">
+            <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md group-hover:border-[#ED145B]"
+              href="#toggle-profile-menu" title="Menu de perfil">
+              <img width="16" height="16" src="./src/images/menu-icon-color.svg" alt="Imagem de perfil do usuário" />
+              <span class="hidden sm:block">Kleiton</span>
+              <div class="flex items-center justify-center w-10 h-10 my-1 bg-[#ED145B] rounded-full">
+                K
+              </div>
+            </a>
+
+            <div class="w-50 pt-1 absolute right-4 hidden group-hover:block">
+              <ul class="border border-[#242323] bg-[#161616] shadow-md shadow-black/20 rounded-md">
+                <li>
+                  <span class="block px-4 py-2">Kleiton Guedes</span>
+                </li>
+                <li>
+                  <hr class="border-[#242323]" />
+                </li>
+                <li>
+                  <a href="/meu-perfil" title="Ver cadastro" class="block px-4 py-2 hover:text-[#ED145B]">Ver
+                    cadastro</a>
+                </li>
+                <li>
+                  <a href="/configuracoes" title="Configurações"
+                    class="block px-4 py-2 hover:text-[#ED145B]">Configurações</a>
+                </li>
+                <li>
+                  <a href="/suporte" title="Suporte" class="block px-4 py-2 hover:text-[#ED145B]">Suporte</a>
+                </li>
+                <li>
+                  <hr class="border-[#242323]" />
+                </li>
+                <li>
+                  <a href="/encerrar-sessao" title="Encerrar sessão"
+                    class="block px-4 py-2 hover:text-[#ED145B]">Encerrar sessão</a>
+                </li>
+              </ul>
             </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-            <nav id="main_header__fast_menu" aria-label="Menu rápido">
-                <ul class="flex justify-end gap-4 p-2">
+    <div class="lg:flex justify-between items-center border border-x-0 border-[#242323] bg-[#161616]">
+      <div class="w-full m-auto xl:w-7xl lg:flex lg:justify-between">
+        <nav id="main_header__main_menu">
+          <ul class="flex flex-col sm:flex-row gap-5 px-4 sm:px-2 xl:px-0 group">
+            <li class="hidden sm:block group-hover:block">
+              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Ir para página principal">
+                <img src="./src/images/chart-icon.svg" alt="Icone de gráfico" />
+                <span>Resumo</span>
+              </a>
+            </li>
+            <li class="hidden sm:block group-hover:block">
+              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Proventos">
+                <img src="./src/images/dollar-sign-icon.svg" alt="Icone de cifrão" />
+                <span>Proventos</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex justify-between gap-3 px-6 lg:px-2 py-6 border-b-2 border-solid border-[#ED145B]"
+                href="#toggle-main-menu-header" title="Gastos">
+                <div class="flex gap-3">
+                  <img width="18" height="18" src="./src/images/dollar-sign-off-icon.svg"
+                    alt="Icone de cifrão cortado" />
+                  <span>Gastos</span>
+                </div>
+                <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
+                  alt="Icone de expandir" />
+              </a>
+            </li>
+            <li class="hidden sm:block group-hover:block">
+              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Metas">
+                <img src="./src/images/target-icon.svg" alt="Icone de alvo" />
+                <span>Metas</span>
+              </a>
+            </li>
+            <li class="hidden sm:block group-hover:block">
+              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/dicas" title="Dicas">
+                <img class="-mt-1" src="./src/images/lamp-icon.svg" alt="Icone de lampada" />
+                <span>Dicas</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div id="main_header__main_filter">
+          <ul class="grid grid-cols-2 gap-4 h-full px-6 lg:px-2 py-2">
+            <li class="relative group">
+              <a class="h-full flex justify-between items-center px-3.5 py-3 border border-[#242323] bg-[#161616] rounded-md group-hover:border-[#ED145B]"
+                href="#toggle-period-filter" title="Filtrar por período">
+                <div class="flex gap-3">
+                  <img width="16" height="16" src="./src/images/calendar-icon.svg" alt="Icone de calendário" />
+                  <span>Últimos 12 meses</span>
+                </div>
+                <img src="./src/images/arrow-down-menu.svg" alt="Icone de seta para expandir menu" />
+              </a>
+
+              <div class="w-full pt-1 absolute right-0 hidden group-hover:block">
+                <ul class="w-full border border-[#242323] bg-[#161616] shadow-md shadow-black/20 rounded-md">
+                  <li>
+                    <span class="block px-4 py-2">Últimos 12 meses</span>
+                  </li>
+                  <li>
+                    <hr class="border-[#242323]" />
+                  </li>
+                  <li>
+                    <a href="#select-period-filter-last-6-months" title="Últimos 6 meses"
+                      class="block px-4 py-2 hover:text-[#ED145B]">Últimos 6 meses</a>
+                  </li>
+                  <li>
+                    <a href="#select-period-filter-last-3-months" title=">Últimos 3 meses"
+                      class="block px-4 py-2 hover:text-[#ED145B]">Últimos 3 meses</a>
+                  </li>
+                  <li>
+                    <a href="#select-period-filter-this-month" title="Neste mês"
+                      class="block px-4 py-2 hover:text-[#ED145B]">Neste mês</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="h-full flex items-center gap-3 px-3.5 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                href="#add-entry" title="Adicionar lançamento">
+                <img width="16" height="16" src="./src/images/add-icon.svg" alt="Icone de adição" />
+                <span>Adicionar lançamento</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main_content" class="w-full py-5">
+    <section class="w-full m-auto xl:w-7xl lg:flex lg:justify-between py-4">
+      <div class="px-6 xl:px-2">
+        <h1 class="text-3xl font-light">Lista de gastos</h1>
+      </div>
+    </section>
+
+    <section class="w-full m-auto xl:w-7xl lg:flex lg:justify-between px-6 xl:px-2 py-6">
+      <div class="w-full p-5 border border-[#242323] bg-[#161616] rounded-md">
+        <h2 class="flex gap-3 items-center py-2 text-xl font-light">
+          <img src="./src/images/check-list-icon.svg" alt="Icone de lista de checagem" />
+          Lançamentos
+        </h2>
+
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-6xl border-collapse">
+            <thead>
+              <tr class="border-b border-[#5B5858]">
+                <th scope="col" class="py-2 text-left font-normal w-[10%]">Tipo</th>
+                <th scope="col" class="py-2 text-left font-normal w-[14%]">Título</th>
+                <th scope="col" class="py-2 text-left font-normal w-[28%]">Descrição</th>
+                <th scope="col" class="py-2 text-left font-normal w-[10%]">Categoria</th>
+                <th scope="col" class="py-2 text-left font-normal w-[10%]">Data</th>
+                <th scope="col" class="py-2 text-left font-normal w-[10%]">Valor</th>
+                <th scope="col" class="py-2 text-left font-normal w-[18%]">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-[#262525]">
+                <td class="py-2">Gasto</td>
+                <td class="py-2">Compra no mercado</td>
+                <td class="py-2">Compras de alimentos e itens básicos</td>
+                <td class="py-2">Alimentação</td>
+                <td class="py-2">13/04/2026</td>
+                <td class="py-2">R$ 428,90</td>
+                <td class="py-2">
+                  <ul class="flex gap-3">
                     <li>
-                        <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="/ajuda" title="Ajuda">
-                            <img width="16" src="./src/images/help-icon-color.svg" alt="Icone de ajuda" />
-                            <span class="hidden sm:block">Ajuda</span>
-                        </a>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#edit-entry" title="Editar gasto" title="Editar gasto">
+                        <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                        <span>Editar</span>
+                      </a>
                     </li>
-                    <li class="relative group pr-4">
-                        <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md group-hover:border-[#ED145B]" href="#toggle-profile-menu" title="Perfil">
-                            <img width="16"  src="./src/images/menu-icon-color.svg" alt="Imagem de perfil do usuário" />
-                            <span class="hidden sm:block">Kleiton</span>
-                            <div class="flex items-center justify-center w-10 h-10 my-1 bg-[#ED145B] rounded-full">
-                                K
-                            </div>
-                        </a>
-
-                        <div class="w-50 absolute right-4 hidden group-hover:block">
-                          <ul class="border border-[#242323] bg-[#161616] shadow-md shadow-black/20 translate-y-1 rounded-md ">
-                              <li>
-                                  <span class="block px-4 py-2">Kleiton Guedes</span>
-                              </li>
-                              <li>
-                                  <hr class="border-[#242323]" />
-                              </li>
-                              <li>
-                                  <a href="/meu-perfil" title="Ver cadastro" class="hover:text-[#ED145B]">
-                                      <span class="block px-4 py-2">Ver cadastro</span>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="/configuracoes" title="Configurações" class="hover:text-[#ED145B]">
-                                      <span class="block px-4 py-2">Configurações</span>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="/suporte" title="Suporte" class="hover:text-[#ED145B]">
-                                      <span class="block px-4 py-2">Suporte</span>
-                                  </a>
-                              </li>
-                              <li>
-                                  <hr class="border-[#242323]" />
-                              </li>
-                              <li>
-                                  <a href="/encerrar-sessao" title="Encerrar sessão" class="hover:text-[#ED145B]">
-                                      <span class="block px-4 py-2">Encerrar sessão</span>
-                                  </a>
-                              </li>
-                          </ul>
-                      </li>
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#exclude-entry" title="Excluir gasto">
+                        <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                        <span>Excluir</span>
+                      </a>
+                    </li>
                   </ul>
-                </div>
-            </nav>
-        </section>
-
-        <section class="lg:flex justify-between items-center border border-x-0 border-[#242323] bg-[#161616]">
-            <div class="w-full m-auto xl:w-7xl lg:flex lg:justify-between">
-                <nav id="main_header__main_menu" aria-label="Menu principal">
-                    <ul class="flex flex-col sm:flex-row gap-5 px-4 sm:px-2 xl:px-0 group">
-                        <li class="hidden sm:block group-hover:block">
-                            <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Ir para página principal">
-                                <img src="./src/images/chart-icon.svg" alt="Icone de gráfico" />
-                                <span>Resumo</span>
-                            </a>
-                        </li>
-                        <li class="hidden sm:block group-hover:block">
-                            <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Proventos">
-                                <img src="./src/images/dollar-sign-icon.svg" alt="Icone de cifrão" />
-                                <span>Proventos</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="flex justify-between gap-3 px-6 lg:px-2 py-6 border-b-2 border-solid border-[#ED145B]" href="#toggle-main-menu-header" title="Gastos">
-                                <div class="flex gap-3">
-                                    <img width="18" src="./src/images/dollar-sign-off-icon.svg" alt="Icone de cifrão cortado" />
-                                    <span>Gastos</span>
-                                </div>
-                                <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
-                            </a>
-                        </li>
-                        <li class="hidden sm:block group-hover:block">
-                            <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Metas">
-                                <img src="./src/images/target-icon.svg" alt="Icone de alvo" />
-                                <span>Metas</span>
-                            </a>
-                        </li>
-                        <li class="hidden sm:block group-hover:block">
-                            <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/dicas" title="Dicas">
-                                <img class="-mt-1" src="./src/images/lamp-icon.svg" alt="Icone de lampada" />
-                                <span>Dicas</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div id="main_header__main_filter">
-                    <ul class="grid grid-cols-2 gap-4 h-full px-6 lg:px-2 py-2">
-                        <li class="relative group">
-                            <a class="h-full flex justify-between items-center px-3.5 py-3 border border-[#242323] bg-[#161616] rounded-md group-hover:border-[#ED145B]" href="#toggle-period-filter" title="Filtrar por período">
-                                <div class="flex gap-3">
-                                    <img width="16"  src="./src/images/calendar-icon.svg" alt="Icone de calendário" />
-                                    <span>Últimos 12 meses</span>
-                                </div>
-                                <img src="./src/images/arrow-down-menu.svg" alt="Icone de seta para expandir menu" />
-                            </a>
-                            
-                            <div class="w-full pt-1 absolute right-0 hidden group-hover:block">
-                              <ul class="w-full border border-[#242323] bg-[#161616] shadow-md shadow-black/20 rounded-md">
-                                <li>
-                                      <span class="block px-4 py-2">Últimos 12 meses</span>
-                                  </li>
-                                  <li>
-                                      <hr class="border-[#242323]" />
-                                  </li>
-                                  <li>
-                                      <a href="#select-period-filter-last-6-months" title="Últimos 6 meses" class="hover:text-[#ED145B]">
-                                          <span class="block px-4 py-2">Últimos 6 meses</span>
-                                      </a>
-                                  </li>
-                                  <li>
-                                      <a href="#select-period-filter-last-3-months" title=">Últimos 3 meses" class="hover:text-[#ED145B]">
-                                          <span class="block px-4 py-2">Últimos 3 meses</span>
-                                      </a>
-                                  </li>
-                                  <li>
-                                      <a href="/menu-2" title="#select-period-filter-this-month" class="hover:text-[#ED145B]">
-                                          <span class="block px-4 py-2">Neste mês</span>
-                                      </a>
-                                  </li>
-                              </ul>  
-                              </div>
-                        </li>
-                        <li>
-                            <a class="h-full flex items-center gap-3 px-3.5 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#add-entry" title="Adicionar lançamento">
-                                <img width="16" src="./src/images/add-icon.svg" alt="Icone de adição" />
-                                <span>Adicionar lançamento</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </header>
-
-    <main id="main_content" class="w-full py-5">
-        <section class="w-full m-auto xl:w-7xl lg:flex lg:justify-between py-4">
-            <div class="px-6 xl:px-2">
-                <p class="text-3xl font-light">Lista de gastos</p>
-            </div>
-        </section>
-
-        <section class="w-full m-auto xl:w-7xl lg:flex lg:justify-between px-6 xl:px-2 py-6">
-            <div class="w-full p-5 border border-[#242323] bg-[#161616] rounded-md">
-                <p class="flex gap-3 items-center py-2">
-                    <img src="./src/images/check-list-icon.svg" alt="Icone de lista de checagem" />
-                    <span class="text-xl font-light">Lançamentos</span>
-                </p>
-
-                <div class="overflow-x-auto">
-                    <table class="w-full min-w-6xl border-collapse">
-                        <thead>
-                            <tr class="border-b border-[#5B5858]">
-                                <th scope="col" class="py-2 text-left font-normal w-[10%]">Tipo</th>
-                                <th scope="col" class="py-2 text-left font-normal w-[14%]">Título</th>
-                                <th scope="col" class="py-2 text-left font-normal w-[28%]">Descrição</th>
-                                <th scope="col" class="py-2 text-left font-normal w-[10%]">Categoria</th>
-                                <th scope="col" class="py-2 text-left font-normal w-[10%]">Data</th>
-                                <th scope="col" class="py-2 text-left font-normal w-[10%]">Valor</th>
-                                <th scope="col" class="py-2 text-left font-normal w-[18%]">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-[#262525]">
-                                <td class="py-2">Gasto</td>
-                                <td class="py-2">Compra no mercado</td>
-                                <td class="py-2">Compras de alimentos e itens básicos</td>
-                                <td class="py-2">Alimentação</td>
-                                <td class="py-2">13/04/2026</td>
-                                <td class="py-2">R$ 428,90</td>
-                                <td class="py-2">
-                                    <ul class="flex gap-3">
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
-                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                                <span>Editar</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
-                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                                <span>Excluir</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-[#262525]">
-                                <td class="py-2">Gasto</td>
-                                <td class="py-2">Consulta médica</td>
-                                <td class="py-2">Pagamento de consulta particular</td>
-                                <td class="py-2">Saúde</td>
-                                <td class="py-2">10/04/2026</td>
-                                <td class="py-2">R$ 250,00</td>
-                                <td class="py-2">
-                                    <ul class="flex gap-3">
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
-                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                                <span>Editar</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
-                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                                <span>Excluir</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-[#262525]">
-                                <td class="py-2">Gasto</td>
-                                <td class="py-2">Cinema em família</td>
-                                <td class="py-2">Ingressos e lanches no final de semana</td>
-                                <td class="py-2">Lazer</td>
-                                <td class="py-2">03/04/2026</td>
-                                <td class="py-2">R$ 186,40</td>
-                                <td class="py-2">
-                                    <ul class="flex gap-3">
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
-                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                                <span>Editar</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
-                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                                <span>Excluir</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-[#262525]">
-                                <td class="py-2">Gasto</td>
-                                <td class="py-2">Restaurante</td>
-                                <td class="py-2">Almoço fora de casa durante o expediente</td>
-                                <td class="py-2">Alimentação</td>
-                                <td class="py-2">02/04/2026</td>
-                                <td class="py-2">R$ 52,90</td>
-                                <td class="py-2">
-                                    <ul class="flex gap-3">
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
-                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                                <span>Editar</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
-                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                                <span>Excluir</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-[#262525]">
-                                <td class="py-2">Gasto</td>
-                                <td class="py-2">Padaria</td>
-                                <td class="py-2">Compra de pães, frios e café da manhã</td>
-                                <td class="py-2">Alimentação</td>
-                                <td class="py-2">31/03/2026</td>
-                                <td class="py-2">R$ 43,70</td>
-                                <td class="py-2">
-                                    <ul class="flex gap-3">
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
-                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                                <span>Editar</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
-                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                                <span>Excluir</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-[#262525]">
-                                <td class="py-2">Gasto</td>
-                                <td class="py-2">Exame laboratorial</td>
-                                <td class="py-2">Pagamento de exame de rotina em laboratório</td>
-                                <td class="py-2">Saúde</td>
-                                <td class="py-2">28/03/2026</td>
-                                <td class="py-2">R$ 145,00</td>
-                                <td class="py-2">
-                                    <ul class="flex gap-3">
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
-                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                                <span>Editar</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
-                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                                <span>Excluir</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-[#262525]">
-                                <td class="py-2">Gasto</td>
-                                <td class="py-2">Passeio no parque</td>
-                                <td class="py-2">Gastos com estacionamento, lanches e bebidas</td>
-                                <td class="py-2">Lazer</td>
-                                <td class="py-2">25/03/2026</td>
-                                <td class="py-2">R$ 58,30</td>
-                                <td class="py-2">
-                                    <ul class="flex gap-3">
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
-                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                                <span>Editar</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
-                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                                <span>Excluir</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-[#262525]">
-                                <td class="py-2">Gasto</td>
-                                <td class="py-2">Delivery</td>
-                                <td class="py-2">Pedido de comida por aplicativo durante a semana</td>
-                                <td class="py-2">Alimentação</td>
-                                <td class="py-2">22/03/2026</td>
-                                <td class="py-2">R$ 67,90</td>
-                                <td class="py-2">
-                                    <ul class="flex gap-3">
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
-                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                                <span>Editar</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
-                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                                <span>Excluir</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-[#262525]">
-                                <td class="py-2">Gasto</td>
-                                <td class="py-2">Consulta médica</td>
-                                <td class="py-2">Pagamento de consulta particular agendada</td>
-                                <td class="py-2">Saúde</td>
-                                <td class="py-2">19/03/2026</td>
-                                <td class="py-2">R$ 250,00</td>
-                                <td class="py-2">
-                                    <ul class="flex gap-3">
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
-                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                                <span>Editar</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
-                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                                <span>Excluir</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-[#262525]">
-                                <td class="py-2">Gasto</td>
-                                <td class="py-2">Mercado semanal</td>
-                                <td class="py-2">Compra de alimentos e produtos básicos para casa</td>
-                                <td class="py-2">Alimentação</td>
-                                <td class="py-2">16/03/2026</td>
-                                <td class="py-2">R$ 386,50</td>
-                                <td class="py-2">
-                                    <ul class="flex gap-3">
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#edit-entry" title="Editar gasto">
-                                                <img width="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
-                                                <span>Editar</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#exclude-entry" title="Excluir gasto">
-                                                <img width="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
-                                                <span>Excluir</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div>
-                    <ul class="flex gap-3 justify-center md:justify-end pt-8 pb-4">
-                        <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md" href="#entry-list-prev-page" title="Página anterior">
-                                <img src="./src/images/prev-pagination-icon.svg" class="opacity-30" alt="Icone de seta para retornar página" />
-                            </a>
-                        </li>
-                        <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md text-[#ED145B]" href="#entry-list-page-1" title="Página 1">
-                                <span> 1 </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#entry-list-page-2" title="Página 2">
-                                <span> 2 </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#entry-list-page-3" title="Página 3">
-                                <span> 3 </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md text-[#666]" href="#entry-list-none" title="Mais páginas...">
-                                <span> ... </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]" href="#entry-list-next-page" title="Próxima página">
-                                <img src="./src/images/next-pagination-icon.svg" alt="Icone de seta para avançar página" />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="main_footer" class="w-full bg-black">
-        <section class="w-full m-auto xl:w-7xl flex flex-col md:flex-row justify-center md:justify-between px-6 lg:px-2 py-6">
-            <div>
-                <ul>
-                    <li class="group">
-                        <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-transparency" title="Transparência">
-                            <span class="block px-4 py-5 text-[#ED145B]">Transparência</span>
-                            <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
-                        </a>
-
-                        <ul id="main-footer-menu-transparency" class="hidden sm:block group-hover:block">
-                            <li>
-                                <a href="/politica-de-privacidade" title="Política de privacidade" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Política de privacidade
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/politica-de-seguranca" title="Política de segurança" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Política de segurança
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/termos-de-uso" title="Termos de Uso" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Termos de Uso
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/etica-compliance-e-esg" title="Ética, Compliance e ESG" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Ética, Compliance e ESG
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/contratos" title="Contratos" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Contratos
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sobre-investimentos" title="Sobre investimentos" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Sobre investimentos
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/relatorios-financeiros" title="Relatórios financeiros" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Relatórios financeiros
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/dados-abertos" title="Dados abertos" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Dados abertos
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li class="group">
-                        <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-careers" title="Carreiras">
-                            <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Carreiras</span>
-                            <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
-                        </a>
-
-                        <ul id="main-footer-menu-careers" class="hidden sm:block group-hover:block">
-                            <li>
-                                <a href="/trabalhe-na-fintech" title="Trabalhe na Fintech" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Trabalhe na Fintech
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/techuniversity" title="TechUniversity" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        TechUniversity
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <ul>
-                    <li class="group">
-                        <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-explore" title="Explorar">
-                            <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Explorar</span>
-                            <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
-                        </a>
-
-                        <ul id="main-footer-menu-explore" class="hidden sm:block group-hover:block">
-                            <li>
-                                <a href="/blog" title="Blog" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Blog
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/comunidade-da-fintech" title="Comunidade da Fintech" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Comunidade da Fintech
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/fininvest" title="FinInvest" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        FinInvest
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li class="group">
-                        <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-press" title="Imprensa">
-                            <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Imprensa</span>
-                            <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
-                        </a>
-
-                        <ul id="main-footer-menu-press" class="hidden sm:block group-hover:block">
-                            <li>
-                                <a href="/sala-de-imprensa" title="Sala de Imprensa" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Sala de Imprensa
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <ul>
-                    <li class="group">
-                        <a class="flex justify-center sm:justify-start" href="#toggle-main-footer-menu-help" title="Ajuda">
-                            <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Ajuda</span>
-                            <img class="sm:hidden" width="12" src="./src/images/arrows-expand.svg" alt="Icone de expandir" />
-                        </a>
-
-                        <ul id="main-footer-menu-help" class="hidden sm:block group-hover:block">
-                            <li>
-                                <a href="/seguranca" title="Segurança" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Segurança
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/perguntas-frequentes" title="Perguntas frequentes" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Perguntas frequentes
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/portal-de-suporte-ao-cliente" title="Portal de suporte ao cliente" class="hover:underline hover:decoration-[#ED145B]">
-                                    <span class="block px-4 py-1 text-center md:text-left">
-                                        Portal de suporte ao cliente
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
+                </td>
+              </tr>
+              <tr class="border-b border-[#262525]">
+                <td class="py-2">Gasto</td>
+                <td class="py-2">Consulta médica</td>
+                <td class="py-2">Pagamento de consulta particular</td>
+                <td class="py-2">Saúde</td>
+                <td class="py-2">10/04/2026</td>
+                <td class="py-2">R$ 250,00</td>
+                <td class="py-2">
+                  <ul class="flex gap-3">
                     <li>
-                        <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Ouvidoria</span>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#edit-entry" title="Editar gasto" title="Editar gasto">
+                        <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                        <span>Editar</span>
+                      </a>
                     </li>
                     <li>
-                        <span class="block px-4 py-1 text-center md:text-left">
-                            Atendimento em dias úteis <br />
-                            das 8h às 18h <br />
-                            (horário de Brasília)
-                        </span>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#exclude-entry" title="Excluir gasto">
+                        <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                        <span>Excluir</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="border-b border-[#262525]">
+                <td class="py-2">Gasto</td>
+                <td class="py-2">Cinema em família</td>
+                <td class="py-2">Ingressos e lanches no final de semana</td>
+                <td class="py-2">Lazer</td>
+                <td class="py-2">03/04/2026</td>
+                <td class="py-2">R$ 186,40</td>
+                <td class="py-2">
+                  <ul class="flex gap-3">
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#edit-entry" title="Editar gasto">
+                        <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
+                        <span>Editar</span>
+                      </a>
                     </li>
                     <li>
-                        <span class="block px-4 py-1 text-center md:text-left">
-                            (11) 3385-8010
-                        </span>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#exclude-entry" title="Excluir gasto">
+                        <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
+                        <span>Excluir</span>
+                      </a>
                     </li>
-                </ul>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="border-b border-[#262525]">
+                <td class="py-2">Gasto</td>
+                <td class="py-2">Restaurante</td>
+                <td class="py-2">Almoço fora de casa durante o expediente</td>
+                <td class="py-2">Alimentação</td>
+                <td class="py-2">02/04/2026</td>
+                <td class="py-2">R$ 52,90</td>
+                <td class="py-2">
+                  <ul class="flex gap-3">
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#edit-entry" title="Editar gasto">
+                        <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
+                        <span>Editar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#exclude-entry" title="Excluir gasto">
+                        <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
+                        <span>Excluir</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="border-b border-[#262525]">
+                <td class="py-2">Gasto</td>
+                <td class="py-2">Padaria</td>
+                <td class="py-2">Compra de pães, frios e café da manhã</td>
+                <td class="py-2">Alimentação</td>
+                <td class="py-2">31/03/2026</td>
+                <td class="py-2">R$ 43,70</td>
+                <td class="py-2">
+                  <ul class="flex gap-3">
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#edit-entry" title="Editar gasto">
+                        <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
+                        <span>Editar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#exclude-entry" title="Excluir gasto">
+                        <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
+                        <span>Excluir</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="border-b border-[#262525]">
+                <td class="py-2">Gasto</td>
+                <td class="py-2">Exame laboratorial</td>
+                <td class="py-2">Pagamento de exame de rotina em laboratório</td>
+                <td class="py-2">Saúde</td>
+                <td class="py-2">28/03/2026</td>
+                <td class="py-2">R$ 145,00</td>
+                <td class="py-2">
+                  <ul class="flex gap-3">
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#edit-entry" title="Editar gasto">
+                        <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
+                        <span>Editar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#exclude-entry" title="Excluir gasto">
+                        <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
+                        <span>Excluir</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="border-b border-[#262525]">
+                <td class="py-2">Gasto</td>
+                <td class="py-2">Passeio no parque</td>
+                <td class="py-2">Gastos com estacionamento, lanches e bebidas</td>
+                <td class="py-2">Lazer</td>
+                <td class="py-2">25/03/2026</td>
+                <td class="py-2">R$ 58,30</td>
+                <td class="py-2">
+                  <ul class="flex gap-3">
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#edit-entry" title="Editar gasto">
+                        <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
+                        <span>Editar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#exclude-entry" title="Excluir gasto">
+                        <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
+                        <span>Excluir</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="border-b border-[#262525]">
+                <td class="py-2">Gasto</td>
+                <td class="py-2">Delivery</td>
+                <td class="py-2">Pedido de comida por aplicativo durante a semana</td>
+                <td class="py-2">Alimentação</td>
+                <td class="py-2">22/03/2026</td>
+                <td class="py-2">R$ 67,90</td>
+                <td class="py-2">
+                  <ul class="flex gap-3">
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#edit-entry" title="Editar gasto">
+                        <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
+                        <span>Editar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#exclude-entry" title="Excluir gasto">
+                        <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
+                        <span>Excluir</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="border-b border-[#262525]">
+                <td class="py-2">Gasto</td>
+                <td class="py-2">Consulta médica</td>
+                <td class="py-2">Pagamento de consulta particular agendada</td>
+                <td class="py-2">Saúde</td>
+                <td class="py-2">19/03/2026</td>
+                <td class="py-2">R$ 250,00</td>
+                <td class="py-2">
+                  <ul class="flex gap-3">
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#edit-entry" title="Editar gasto">
+                        <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
+                        <span>Editar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#exclude-entry" title="Excluir gasto">
+                        <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
+                        <span>Excluir</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="border-b border-[#262525]">
+                <td class="py-2">Gasto</td>
+                <td class="py-2">Mercado semanal</td>
+                <td class="py-2">Compra de alimentos e produtos básicos para casa</td>
+                <td class="py-2">Alimentação</td>
+                <td class="py-2">16/03/2026</td>
+                <td class="py-2">R$ 386,50</td>
+                <td class="py-2">
+                  <ul class="flex gap-3">
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#edit-entry" title="Editar gasto">
+                        <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
+                        <span>Editar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                        href="#exclude-entry" title="Excluir gasto">
+                        <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
+                        <span>Excluir</span>
+                      </a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-                <ul>
-                    <li>
-                        <span class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Endereço</span>
-                    </li>
-                    <li>
-                        <span class="block px-4 py-1 text-center md:text-left">
-                            Avenida Paulista, 1106 <br />
-                            São Paulo SP <br />
-                            01311-000
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <nav>
+          <ul class="flex gap-3 justify-center md:justify-end pt-8 pb-4">
+            <li>
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md"
+                href="#entry-list-prev-page" title="Ir para página anterior">
+                <img src="./src/images/prev-pagination-icon.svg" class="opacity-30" alt="Icone de seta para esquerda" />
+              </a>
+            </li>
+            <li>
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md text-[#ED145B]"
+                href="#entry-list-page-1" title="Ir para a página 1">
+                <span>1</span>
+              </a>
+            </li>
+            <li>
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                href="#entry-list-page-2" title="Ir para a página 2">
+                <span>2</span>
+              </a>
+            </li>
+            <li>
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                href="#entry-list-page-3" title="Ir para a página 3">
+                <span>3</span>
+              </a>
+            </li>
+            <li>
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md text-[#666]"
+                href="#entry-list-none" title="Mais páginas...">
+                <span>...</span>
+              </a>
+            </li>
+            <li>
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                href="#entry-list-next-page" title="Ir para próxima página">
+                <img src="./src/images/next-pagination-icon.svg" alt="Próxima página" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </main>
 
-        <section class="flex justify-center">
-            <div id="main_footer__logo" class="p-4">
-                <a class="block p-2" href="/" title="Fintech">
-                    <img width="100" src="./src/images/fintech-logo.svg" alt="Logotipo Fintech" />
-                </a>
-            </div>
-        </section>
-    </footer>
+  <footer id="main_footer" class="w-full bg-black">
+    <div class="w-full m-auto xl:w-7xl flex flex-col md:flex-row justify-center md:justify-between px-6 lg:px-2 py-6">
+      <div>
+        <div class="group">
+          <h3>
+            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[#ED145B]"
+              href="#toggle-main-footer-menu-transparency" title="Transparência">
+              Transparência
+              <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
+                alt="Icone de expandir" />
+            </a>
+          </h3>
+          <nav>
+            <ul id="main-footer-menu-transparency" class="hidden sm:block group-hover:block">
+              <li>
+                <a href="/politica-de-privacidade" title="Política de privacidade"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Política
+                  de privacidade</a>
+              </li>
+              <li>
+                <a href="/politica-de-seguranca" title="Política de segurança"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Política
+                  de segurança</a>
+              </li>
+              <li>
+                <a href="/termos-de-uso" title="Termos de Uso"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Termos de
+                  Uso</a>
+              </li>
+              <li>
+                <a href="/etica-compliance-e-esg" title="Ética, Compliance e ESG"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Ética,
+                  Compliance e ESG</a>
+              </li>
+              <li>
+                <a href="/contratos" title="Contratos"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Contratos</a>
+              </li>
+              <li>
+                <a href="/sobre-investimentos" title="Sobre investimentos"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Sobre
+                  investimentos</a>
+              </li>
+              <li>
+                <a href="/relatorios-financeiros" title="Relatórios financeiros"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Relatórios
+                  financeiros</a>
+              </li>
+              <li>
+                <a href="/dados-abertos" title="Dados abertos"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Dados
+                  abertos</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div>
+        <div class="group">
+          <h3>
+            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[#ED145B]"
+              href="#toggle-main-footer-menu-careers" title="Carreiras">
+              Carreiras
+              <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
+                alt="Icone de expandir" />
+            </a>
+          </h3>
+          <nav>
+            <ul id="main-footer-menu-careers" class="hidden sm:block group-hover:block">
+              <li>
+                <a href="/trabalhe-na-fintech" title="Trabalhe na Fintech"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Trabalhe
+                  na Fintech</a>
+              </li>
+              <li>
+                <a href="/techuniversity" title="TechUniversity"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">TechUniversity</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="group">
+          <h3>
+            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[#ED145B]"
+              href="#toggle-main-footer-menu-explore" title="Explorar">
+              Explorar
+              <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
+                alt="Icone de expandir" />
+            </a>
+          </h3>
+          <nav>
+            <ul id="main-footer-menu-explore" class="hidden sm:block group-hover:block">
+              <li>
+                <a href="/blog" title="Blog"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Blog</a>
+              </li>
+              <li>
+                <a href="/comunidade-da-fintech" title="Comunidade da Fintech"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Comunidade
+                  da Fintech</a>
+              </li>
+              <li>
+                <a href="/fininvest" title="FinInvest"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">FinInvest</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div>
+        <div class="group">
+          <h3>
+            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[#ED145B]"
+              href="#toggle-main-footer-menu-press" title="Imprensa">
+              Imprensa
+              <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
+                alt="Icone de expandir" />
+            </a>
+          </h3>
+          <nav>
+            <ul id="main-footer-menu-press" class="hidden sm:block group-hover:block">
+              <li>
+                <a href="/sala-de-imprensa" title="Sala de Imprensa"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Sala de
+                  Imprensa</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="group">
+          <h3>
+            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[#ED145B]"
+              href="#toggle-main-footer-menu-help" title="Ajuda">
+              Ajuda
+              <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
+                alt="Icone de expandir" />
+            </a>
+          </h3>
+          <nav>
+            <ul id="main-footer-menu-help" class="hidden sm:block group-hover:block">
+              <li>
+                <a href="/seguranca" title="Segurança"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Segurança</a>
+              </li>
+              <li>
+                <a href="/perguntas-frequentes" title="Perguntas frequentes"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Perguntas
+                  frequentes</a>
+              </li>
+              <li>
+                <a href="/portal-de-suporte-ao-cliente" title="Portal de suporte ao cliente"
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Portal de
+                  suporte ao cliente</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h3 class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Ouvidoria</h3>
+          <p class="block px-4 py-1 text-center md:text-left">
+            Atendimento em dias úteis <br />
+            das 8h às 18h <br />
+            (horário de Brasília)
+          </p>
+          <p class="block px-4 py-1 text-center md:text-left">(11) 3385-8010</p>
+        </div>
+
+        <div>
+          <h3 class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Endereço</h3>
+          <address class="not-italic block px-4 py-1 text-center md:text-left">
+            Avenida Paulista, 1106 <br />
+            São Paulo SP <br />
+            01311-000
+          </address>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <div id="main_footer__logo" class="p-4">
+        <a class="block p-2" href="/" title="Página inicial">
+          <img width="100" src="./src/images/fintech-logo.svg" alt="Logotipo Fintech" />
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
