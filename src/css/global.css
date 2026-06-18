@@ -1,5 +1,8 @@
-/* @import "tailwindcss";
-
-@theme {
+:root {
   --color-primary: #ED145B;
-} */
+  --color-bg: #161616;
+  --color-surface: #121212;
+  --color-border: #242323;
+  --color-border-subtle: #262525;
+  --color-muted: #5B5858;
+}

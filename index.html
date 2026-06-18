@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./src/css/global.css" />
 </head>
 
-<body class="h-screen overflow-x-hidden bg-[#121212] text-white">
+<body class="h-screen overflow-x-hidden bg-[var(--color-surface)] text-white">
   <header id="main_header" class="w-full">
     <div class="w-full h-35 grid grid-cols-[1fr_2fr] justify-between items-center">
       <div id="main_header__logo">
@@ -22,47 +22,47 @@
       <nav id="main_header__fast_menu">
         <ul class="flex justify-end gap-4 p-2">
           <li>
-            <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+            <a class="h-full flex items-center gap-3 px-3.5 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
               href="/ajuda" title="Ajuda">
               <img width="16" height="16" src="./src/images/help-icon-color.svg" alt="Icone de ajuda" />
               <span class="hidden sm:block">Ajuda</span>
             </a>
           </li>
           <li class="relative group pr-4">
-            <a class="h-full flex items-center gap-3 px-3.5 border border-[#242323] bg-[#161616] rounded-md group-hover:border-[#ED145B]"
+            <a class="h-full flex items-center gap-3 px-3.5 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md group-hover:border-[var(--color-primary)]"
               href="#toggle-profile-menu" title="Menu de perfil">
               <img width="16" height="16" src="./src/images/menu-icon-color.svg" alt="Imagem de perfil do usuário" />
               <span class="hidden sm:block">Kleiton</span>
-              <div class="flex items-center justify-center w-10 h-10 my-1 bg-[#ED145B] rounded-full">
+              <div class="flex items-center justify-center w-10 h-10 my-1 bg-[var(--color-primary)] rounded-full">
                 K
               </div>
             </a>
 
             <div class="w-50 pt-1 absolute right-4 hidden group-hover:block">
-              <ul class="border border-[#242323] bg-[#161616] shadow-md shadow-black/20 rounded-md">
+              <ul class="border border-[var(--color-border)] bg-[var(--color-bg)] shadow-md shadow-black/20 rounded-md">
                 <li>
                   <span class="block px-4 py-2">Kleiton Guedes</span>
                 </li>
                 <li>
-                  <hr class="border-[#242323]" />
+                  <hr class="border-[var(--color-border)]" />
                 </li>
                 <li>
-                  <a href="/meu-perfil" title="Ver cadastro" class="block px-4 py-2 hover:text-[#ED145B]">Ver
+                  <a href="/meu-perfil" title="Ver cadastro" class="block px-4 py-2 hover:text-[var(--color-primary)]">Ver
                     cadastro</a>
                 </li>
                 <li>
                   <a href="/configuracoes" title="Configurações"
-                    class="block px-4 py-2 hover:text-[#ED145B]">Configurações</a>
+                    class="block px-4 py-2 hover:text-[var(--color-primary)]">Configurações</a>
                 </li>
                 <li>
-                  <a href="/suporte" title="Suporte" class="block px-4 py-2 hover:text-[#ED145B]">Suporte</a>
+                  <a href="/suporte" title="Suporte" class="block px-4 py-2 hover:text-[var(--color-primary)]">Suporte</a>
                 </li>
                 <li>
-                  <hr class="border-[#242323]" />
+                  <hr class="border-[var(--color-border)]" />
                 </li>
                 <li>
                   <a href="/encerrar-sessao" title="Encerrar sessão"
-                    class="block px-4 py-2 hover:text-[#ED145B]">Encerrar sessão</a>
+                    class="block px-4 py-2 hover:text-[var(--color-primary)]">Encerrar sessão</a>
                 </li>
               </ul>
             </div>
@@ -71,24 +71,24 @@
       </nav>
     </div>
 
-    <div class="lg:flex justify-between items-center border border-x-0 border-[#242323] bg-[#161616]">
+    <div class="lg:flex justify-between items-center border border-x-0 border-[var(--color-border)] bg-[var(--color-bg)]">
       <div class="w-full m-auto xl:w-7xl lg:flex lg:justify-between">
         <nav id="main_header__main_menu">
           <ul class="flex flex-col sm:flex-row gap-5 px-4 sm:px-2 xl:px-0 group">
             <li class="hidden sm:block group-hover:block">
-              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Ir para página principal">
+              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[var(--color-primary)]" href="/" title="Ir para página principal">
                 <img src="./src/images/chart-icon.svg" alt="Icone de gráfico" />
                 <span>Resumo</span>
               </a>
             </li>
             <li class="hidden sm:block group-hover:block">
-              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Proventos">
+              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[var(--color-primary)]" href="/" title="Proventos">
                 <img src="./src/images/dollar-sign-icon.svg" alt="Icone de cifrão" />
                 <span>Proventos</span>
               </a>
             </li>
             <li>
-              <a class="flex justify-between gap-3 px-6 lg:px-2 py-6 border-b-2 border-solid border-[#ED145B]"
+              <a class="flex justify-between gap-3 px-6 lg:px-2 py-6 border-b-2 border-solid border-[var(--color-primary)]"
                 href="#toggle-main-menu-header" title="Gastos">
                 <div class="flex gap-3">
                   <img width="18" height="18" src="./src/images/dollar-sign-off-icon.svg"
@@ -100,13 +100,13 @@
               </a>
             </li>
             <li class="hidden sm:block group-hover:block">
-              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/" title="Metas">
+              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[var(--color-primary)]" href="/" title="Metas">
                 <img src="./src/images/target-icon.svg" alt="Icone de alvo" />
                 <span>Metas</span>
               </a>
             </li>
             <li class="hidden sm:block group-hover:block">
-              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[#ED145B]" href="/dicas" title="Dicas">
+              <a class="flex gap-3 px-6 lg:px-2 py-6 hover:text-[var(--color-primary)]" href="/dicas" title="Dicas">
                 <img class="-mt-1" src="./src/images/lamp-icon.svg" alt="Icone de lampada" />
                 <span>Dicas</span>
               </a>
@@ -117,7 +117,7 @@
         <div id="main_header__main_filter">
           <ul class="grid grid-cols-2 gap-4 h-full px-6 lg:px-2 py-2">
             <li class="relative group">
-              <a class="h-full flex justify-between items-center px-3.5 py-3 border border-[#242323] bg-[#161616] rounded-md group-hover:border-[#ED145B]"
+              <a class="h-full flex justify-between items-center px-3.5 py-3 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md group-hover:border-[var(--color-primary)]"
                 href="#toggle-period-filter" title="Filtrar por período">
                 <div class="flex gap-3">
                   <img width="16" height="16" src="./src/images/calendar-icon.svg" alt="Icone de calendário" />
@@ -127,30 +127,30 @@
               </a>
 
               <div class="w-full pt-1 absolute right-0 hidden group-hover:block">
-                <ul class="w-full border border-[#242323] bg-[#161616] shadow-md shadow-black/20 rounded-md">
+                <ul class="w-full border border-[var(--color-border)] bg-[var(--color-bg)] shadow-md shadow-black/20 rounded-md">
                   <li>
                     <span class="block px-4 py-2">Últimos 12 meses</span>
                   </li>
                   <li>
-                    <hr class="border-[#242323]" />
+                    <hr class="border-[var(--color-border)]" />
                   </li>
                   <li>
                     <a href="#select-period-filter-last-6-months" title="Últimos 6 meses"
-                      class="block px-4 py-2 hover:text-[#ED145B]">Últimos 6 meses</a>
+                      class="block px-4 py-2 hover:text-[var(--color-primary)]">Últimos 6 meses</a>
                   </li>
                   <li>
                     <a href="#select-period-filter-last-3-months" title=">Últimos 3 meses"
-                      class="block px-4 py-2 hover:text-[#ED145B]">Últimos 3 meses</a>
+                      class="block px-4 py-2 hover:text-[var(--color-primary)]">Últimos 3 meses</a>
                   </li>
                   <li>
                     <a href="#select-period-filter-this-month" title="Neste mês"
-                      class="block px-4 py-2 hover:text-[#ED145B]">Neste mês</a>
+                      class="block px-4 py-2 hover:text-[var(--color-primary)]">Neste mês</a>
                   </li>
                 </ul>
               </div>
             </li>
             <li>
-              <a class="h-full flex items-center gap-3 px-3.5 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+              <a class="h-full flex items-center gap-3 px-3.5 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                 href="#add-entry" title="Adicionar lançamento">
                 <img width="16" height="16" src="./src/images/add-icon.svg" alt="Icone de adição" />
                 <span>Adicionar lançamento</span>
@@ -170,7 +170,7 @@
     </section>
 
     <section class="w-full m-auto xl:w-7xl lg:flex lg:justify-between px-6 xl:px-2 py-6">
-      <div class="w-full p-5 border border-[#242323] bg-[#161616] rounded-md">
+      <div class="w-full p-5 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md">
         <h2 class="flex gap-3 items-center py-2 text-xl font-light">
           <img src="./src/images/check-list-icon.svg" alt="Icone de lista de checagem" />
           Lançamentos
@@ -179,7 +179,7 @@
         <div class="overflow-x-auto">
           <table class="w-full min-w-6xl border-collapse">
             <thead>
-              <tr class="border-b border-[#5B5858]">
+              <tr class="border-b border-[var(--color-muted)]">
                 <th scope="col" class="py-2 text-left font-normal w-[10%]">Tipo</th>
                 <th scope="col" class="py-2 text-left font-normal w-[14%]">Título</th>
                 <th scope="col" class="py-2 text-left font-normal w-[28%]">Descrição</th>
@@ -190,7 +190,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="border-b border-[#262525]">
+              <tr class="border-b border-[var(--color-border-subtle)]">
                 <td class="py-2">Gasto</td>
                 <td class="py-2">Compra no mercado</td>
                 <td class="py-2">Compras de alimentos e itens básicos</td>
@@ -200,14 +200,14 @@
                 <td class="py-2">
                   <ul class="flex gap-3">
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#edit-entry" title="Editar gasto" title="Editar gasto">
                         <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                         <span>Editar</span>
                       </a>
                     </li>
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#exclude-entry" title="Excluir gasto">
                         <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                         <span>Excluir</span>
@@ -216,7 +216,7 @@
                   </ul>
                 </td>
               </tr>
-              <tr class="border-b border-[#262525]">
+              <tr class="border-b border-[var(--color-border-subtle)]">
                 <td class="py-2">Gasto</td>
                 <td class="py-2">Consulta médica</td>
                 <td class="py-2">Pagamento de consulta particular</td>
@@ -226,14 +226,14 @@
                 <td class="py-2">
                   <ul class="flex gap-3">
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#edit-entry" title="Editar gasto" title="Editar gasto">
                         <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                         <span>Editar</span>
                       </a>
                     </li>
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#exclude-entry" title="Excluir gasto">
                         <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                         <span>Excluir</span>
@@ -242,7 +242,7 @@
                   </ul>
                 </td>
               </tr>
-              <tr class="border-b border-[#262525]">
+              <tr class="border-b border-[var(--color-border-subtle)]">
                 <td class="py-2">Gasto</td>
                 <td class="py-2">Cinema em família</td>
                 <td class="py-2">Ingressos e lanches no final de semana</td>
@@ -252,14 +252,14 @@
                 <td class="py-2">
                   <ul class="flex gap-3">
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#edit-entry" title="Editar gasto">
                         <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de ajuda" />
                         <span>Editar</span>
                       </a>
                     </li>
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#exclude-entry" title="Excluir gasto">
                         <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de ajuda" />
                         <span>Excluir</span>
@@ -268,7 +268,7 @@
                   </ul>
                 </td>
               </tr>
-              <tr class="border-b border-[#262525]">
+              <tr class="border-b border-[var(--color-border-subtle)]">
                 <td class="py-2">Gasto</td>
                 <td class="py-2">Restaurante</td>
                 <td class="py-2">Almoço fora de casa durante o expediente</td>
@@ -278,14 +278,14 @@
                 <td class="py-2">
                   <ul class="flex gap-3">
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#edit-entry" title="Editar gasto">
                         <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
                         <span>Editar</span>
                       </a>
                     </li>
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#exclude-entry" title="Excluir gasto">
                         <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
                         <span>Excluir</span>
@@ -294,7 +294,7 @@
                   </ul>
                 </td>
               </tr>
-              <tr class="border-b border-[#262525]">
+              <tr class="border-b border-[var(--color-border-subtle)]">
                 <td class="py-2">Gasto</td>
                 <td class="py-2">Padaria</td>
                 <td class="py-2">Compra de pães, frios e café da manhã</td>
@@ -304,14 +304,14 @@
                 <td class="py-2">
                   <ul class="flex gap-3">
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#edit-entry" title="Editar gasto">
                         <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
                         <span>Editar</span>
                       </a>
                     </li>
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#exclude-entry" title="Excluir gasto">
                         <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
                         <span>Excluir</span>
@@ -320,7 +320,7 @@
                   </ul>
                 </td>
               </tr>
-              <tr class="border-b border-[#262525]">
+              <tr class="border-b border-[var(--color-border-subtle)]">
                 <td class="py-2">Gasto</td>
                 <td class="py-2">Exame laboratorial</td>
                 <td class="py-2">Pagamento de exame de rotina em laboratório</td>
@@ -330,14 +330,14 @@
                 <td class="py-2">
                   <ul class="flex gap-3">
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#edit-entry" title="Editar gasto">
                         <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
                         <span>Editar</span>
                       </a>
                     </li>
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#exclude-entry" title="Excluir gasto">
                         <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
                         <span>Excluir</span>
@@ -346,7 +346,7 @@
                   </ul>
                 </td>
               </tr>
-              <tr class="border-b border-[#262525]">
+              <tr class="border-b border-[var(--color-border-subtle)]">
                 <td class="py-2">Gasto</td>
                 <td class="py-2">Passeio no parque</td>
                 <td class="py-2">Gastos com estacionamento, lanches e bebidas</td>
@@ -356,14 +356,14 @@
                 <td class="py-2">
                   <ul class="flex gap-3">
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#edit-entry" title="Editar gasto">
                         <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
                         <span>Editar</span>
                       </a>
                     </li>
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#exclude-entry" title="Excluir gasto">
                         <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
                         <span>Excluir</span>
@@ -372,7 +372,7 @@
                   </ul>
                 </td>
               </tr>
-              <tr class="border-b border-[#262525]">
+              <tr class="border-b border-[var(--color-border-subtle)]">
                 <td class="py-2">Gasto</td>
                 <td class="py-2">Delivery</td>
                 <td class="py-2">Pedido de comida por aplicativo durante a semana</td>
@@ -382,14 +382,14 @@
                 <td class="py-2">
                   <ul class="flex gap-3">
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#edit-entry" title="Editar gasto">
                         <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
                         <span>Editar</span>
                       </a>
                     </li>
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#exclude-entry" title="Excluir gasto">
                         <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
                         <span>Excluir</span>
@@ -398,7 +398,7 @@
                   </ul>
                 </td>
               </tr>
-              <tr class="border-b border-[#262525]">
+              <tr class="border-b border-[var(--color-border-subtle)]">
                 <td class="py-2">Gasto</td>
                 <td class="py-2">Consulta médica</td>
                 <td class="py-2">Pagamento de consulta particular agendada</td>
@@ -408,14 +408,14 @@
                 <td class="py-2">
                   <ul class="flex gap-3">
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#edit-entry" title="Editar gasto">
                         <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
                         <span>Editar</span>
                       </a>
                     </li>
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#exclude-entry" title="Excluir gasto">
                         <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
                         <span>Excluir</span>
@@ -424,7 +424,7 @@
                   </ul>
                 </td>
               </tr>
-              <tr class="border-b border-[#262525]">
+              <tr class="border-b border-[var(--color-border-subtle)]">
                 <td class="py-2">Gasto</td>
                 <td class="py-2">Mercado semanal</td>
                 <td class="py-2">Compra de alimentos e produtos básicos para casa</td>
@@ -434,14 +434,14 @@
                 <td class="py-2">
                   <ul class="flex gap-3">
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#edit-entry" title="Editar gasto">
                         <img width="16" height="16" src="./src/images/file-edit-icon.svg" alt="Icone de editar" />
                         <span>Editar</span>
                       </a>
                     </li>
                     <li>
-                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+                      <a class="h-full flex items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                         href="#exclude-entry" title="Excluir gasto">
                         <img width="16" height="16" src="./src/images/trash-up-icon.svg" alt="Icone de lixeira" />
                         <span>Excluir</span>
@@ -457,37 +457,37 @@
         <nav>
           <ul class="flex gap-3 justify-center md:justify-end pt-8 pb-4">
             <li>
-              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md"
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md"
                 href="#entry-list-prev-page" title="Ir para página anterior">
                 <img src="./src/images/prev-pagination-icon.svg" class="opacity-30" alt="Icone de seta para esquerda" />
               </a>
             </li>
             <li>
-              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md text-[#ED145B]"
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md text-[var(--color-primary)]"
                 href="#entry-list-page-1" title="Ir para a página 1">
                 <span>1</span>
               </a>
             </li>
             <li>
-              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                 href="#entry-list-page-2" title="Ir para a página 2">
                 <span>2</span>
               </a>
             </li>
             <li>
-              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                 href="#entry-list-page-3" title="Ir para a página 3">
                 <span>3</span>
               </a>
             </li>
             <li>
-              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md text-[#666]"
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md text-[var(--color-muted)]"
                 href="#entry-list-none" title="Mais páginas...">
                 <span>...</span>
               </a>
             </li>
             <li>
-              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[#242323] bg-[#161616] rounded-md hover:border-[#ED145B]"
+              <a class="w-12 h-12 flex justify-center items-center gap-2 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-bg)] rounded-md hover:border-[var(--color-primary)]"
                 href="#entry-list-next-page" title="Ir para próxima página">
                 <img src="./src/images/next-pagination-icon.svg" alt="Próxima página" />
               </a>
@@ -503,7 +503,7 @@
       <div>
         <div class="group">
           <h3>
-            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[#ED145B]"
+            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[var(--color-primary)]"
               href="#toggle-main-footer-menu-transparency" title="Transparência">
               Transparência
               <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
@@ -514,41 +514,41 @@
             <ul id="main-footer-menu-transparency" class="hidden sm:block group-hover:block">
               <li>
                 <a href="/politica-de-privacidade" title="Política de privacidade"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Política
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Política
                   de privacidade</a>
               </li>
               <li>
                 <a href="/politica-de-seguranca" title="Política de segurança"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Política
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Política
                   de segurança</a>
               </li>
               <li>
                 <a href="/termos-de-uso" title="Termos de Uso"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Termos de
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Termos de
                   Uso</a>
               </li>
               <li>
                 <a href="/etica-compliance-e-esg" title="Ética, Compliance e ESG"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Ética,
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Ética,
                   Compliance e ESG</a>
               </li>
               <li>
                 <a href="/contratos" title="Contratos"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Contratos</a>
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Contratos</a>
               </li>
               <li>
                 <a href="/sobre-investimentos" title="Sobre investimentos"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Sobre
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Sobre
                   investimentos</a>
               </li>
               <li>
                 <a href="/relatorios-financeiros" title="Relatórios financeiros"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Relatórios
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Relatórios
                   financeiros</a>
               </li>
               <li>
                 <a href="/dados-abertos" title="Dados abertos"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Dados
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Dados
                   abertos</a>
               </li>
             </ul>
@@ -559,7 +559,7 @@
       <div>
         <div class="group">
           <h3>
-            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[#ED145B]"
+            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[var(--color-primary)]"
               href="#toggle-main-footer-menu-careers" title="Carreiras">
               Carreiras
               <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
@@ -570,12 +570,12 @@
             <ul id="main-footer-menu-careers" class="hidden sm:block group-hover:block">
               <li>
                 <a href="/trabalhe-na-fintech" title="Trabalhe na Fintech"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Trabalhe
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Trabalhe
                   na Fintech</a>
               </li>
               <li>
                 <a href="/techuniversity" title="TechUniversity"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">TechUniversity</a>
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">TechUniversity</a>
               </li>
             </ul>
           </nav>
@@ -583,7 +583,7 @@
 
         <div class="group">
           <h3>
-            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[#ED145B]"
+            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[var(--color-primary)]"
               href="#toggle-main-footer-menu-explore" title="Explorar">
               Explorar
               <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
@@ -594,16 +594,16 @@
             <ul id="main-footer-menu-explore" class="hidden sm:block group-hover:block">
               <li>
                 <a href="/blog" title="Blog"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Blog</a>
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Blog</a>
               </li>
               <li>
                 <a href="/comunidade-da-fintech" title="Comunidade da Fintech"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Comunidade
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Comunidade
                   da Fintech</a>
               </li>
               <li>
                 <a href="/fininvest" title="FinInvest"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">FinInvest</a>
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">FinInvest</a>
               </li>
             </ul>
           </nav>
@@ -613,7 +613,7 @@
       <div>
         <div class="group">
           <h3>
-            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[#ED145B]"
+            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[var(--color-primary)]"
               href="#toggle-main-footer-menu-press" title="Imprensa">
               Imprensa
               <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
@@ -624,7 +624,7 @@
             <ul id="main-footer-menu-press" class="hidden sm:block group-hover:block">
               <li>
                 <a href="/sala-de-imprensa" title="Sala de Imprensa"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Sala de
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Sala de
                   Imprensa</a>
               </li>
             </ul>
@@ -633,7 +633,7 @@
 
         <div class="group">
           <h3>
-            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[#ED145B]"
+            <a class="flex justify-center sm:justify-start gap-2 px-4 py-5 text-[var(--color-primary)]"
               href="#toggle-main-footer-menu-help" title="Ajuda">
               Ajuda
               <img class="sm:hidden" width="12" height="12" src="./src/images/arrows-expand.svg"
@@ -644,16 +644,16 @@
             <ul id="main-footer-menu-help" class="hidden sm:block group-hover:block">
               <li>
                 <a href="/seguranca" title="Segurança"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Segurança</a>
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Segurança</a>
               </li>
               <li>
                 <a href="/perguntas-frequentes" title="Perguntas frequentes"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Perguntas
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Perguntas
                   frequentes</a>
               </li>
               <li>
                 <a href="/portal-de-suporte-ao-cliente" title="Portal de suporte ao cliente"
-                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[#ED145B]">Portal de
+                  class="block px-4 py-1 text-center md:text-left hover:underline hover:decoration-[var(--color-primary)]">Portal de
                   suporte ao cliente</a>
               </li>
             </ul>
@@ -663,7 +663,7 @@
 
       <div>
         <div>
-          <h3 class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Ouvidoria</h3>
+          <h3 class="block px-4 py-5 text-[var(--color-primary)] text-center md:text-left">Ouvidoria</h3>
           <p class="block px-4 py-1 text-center md:text-left">
             Atendimento em dias úteis <br />
             das 8h às 18h <br />
@@ -673,7 +673,7 @@
         </div>
 
         <div>
-          <h3 class="block px-4 py-5 text-[#ED145B] text-center md:text-left">Endereço</h3>
+          <h3 class="block px-4 py-5 text-[var(--color-primary)] text-center md:text-left">Endereço</h3>
           <address class="not-italic block px-4 py-1 text-center md:text-left">
             Avenida Paulista, 1106 <br />
             São Paulo SP <br />
